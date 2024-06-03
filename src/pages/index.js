@@ -75,6 +75,9 @@ const moreLinks = [
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = () => (
+ 
+  
+  
   <Layout>
     <div className={styles.textCenter}>
       <StaticImage
@@ -133,10 +136,13 @@ const IndexPage = () => (
       />
       
       {/* <button href="https://www.patrimonionacional.es/sobre-patrimonio/conoce-nuestra-historia">
+
         NOSOTROS
+
+       
         
 
-      </button>
+      </button> 
       <button href="https://www.patrimonionacional.es/actualidad/noticias-destacadas">
           NOTICIAS
       </button>
@@ -145,33 +151,9 @@ const IndexPage = () => (
       </button>
       <button href="https://tickets.patrimonionacional.es/es">
           VISITA
-      </button> */}
+      </button>  */}
       <p><strong>Siguenos en:</strong>
-      
       <br></br>
-      <StaticImage
-        src="../images/linkedin.png"
-        loading="eager"
-        height={30}
-        width={30}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-        // url="https://es.linkedin.com/company/patrimonionacional"
-      />
-      <br></br>
-      <StaticImage
-        src="../images/youtube.png"
-        loading="eager"
-        height={20}
-        width={20}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-        // url="https://www.youtube.com/channel/UC1aAN4rDbKBeFmwKMBc_2dA"
-      />
       <br></br>
       <StaticImage
         src="../images/x.png"
@@ -184,6 +166,41 @@ const IndexPage = () => (
         style={{ marginBottom: `var(--space-3)` }}
         // url="https://x.com/PatrimNacional"
       />
+      <br></br>
+      <a href="https://x.com/PatrimNacional">x</a>
+      <br></br>
+      <br></br>
+      <StaticImage
+        src="../images/linkedin.png"
+        loading="eager"
+        height={30}
+        width={30}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ marginBottom: `var(--space-3)` }}
+        // url="https://es.linkedin.com/company/patrimonionacional"
+      />
+      
+      <a href="https://es.linkedin.com/company/patrimonionacional">linkedin</a>
+      <br></br>
+      <StaticImage
+        src="../images/youtube.png"
+        loading="eager"
+        height={20}
+        width={20}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ marginBottom: `var(--space-3)` }}
+        // url="https://www.youtube.com/channel/UC1aAN4rDbKBeFmwKMBc_2dA"
+      />
+      <a href="https://www.youtube.com/channel/UC1aAN4rDbKBeFmwKMBc_2dA">youtube</a>
+      <br></br>
+      
+      
+      
+      
       </p>
         {/* <br />
         Edit <code>src/pages/index.js</code> to update this page. */}
@@ -227,19 +244,20 @@ const IndexPage = () => (
      <StaticImage
         src="../images/tandem.png"
         loading="eager"
-        height={50}
-        width={70}
+        height={30}
+        width={50}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
         style={{ 
-          marginBottom: `var(--space-3)`, 
-          marginTop: `2em`,
-          marginLeft: `20em`,
+          marginBottom: `var(--space-3)`,
+          marginLeft: `8em`, 
+          
         }}
       />
   </Layout>
-)
+  
+  )
 
 /**
  * Head export to define metadata for the page

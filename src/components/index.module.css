@@ -60,7 +60,10 @@ p{
   
 }
 
-button{
+/* button{
   background-color: #159bf3;
   
+} */
+a{
+  text-align: left;
 }
