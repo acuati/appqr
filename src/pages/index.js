@@ -41,7 +41,12 @@ const samplePageLinks = [
     description:
       "En esta página se encuentra tanto la información institucional de Patrimonio Nacional; como la información al público",
   },
-  { text: "Patrimonio Nacional", url: "https://www.patrimonionacional.es/" },
+  { 
+    text: "Patrimonio Nacional", 
+    url: "https://www.patrimonionacional.es/" ,
+   
+  },
+  
   { text: "NOSOTROS", url: "https://www.patrimonionacional.es/sobre-patrimonio/conoce-nuestra-historia" },
   { text: "NOTICIAS", url: "https://www.patrimonionacional.es/actualidad/noticias-destacadas" },
   { text: "CONTACTO", url: "https://www.patrimonionacional.es/contacto" },
@@ -52,7 +57,12 @@ const samplePageLinks = [
 ]
 
 
+
+
+
+
 const moreLinks = [
+  
   { text: "Aviso legal", url: "https://www.patrimonionacional.es/aviso-legal" },
   {
     text: "Accesibilidad",
@@ -79,6 +89,11 @@ const IndexPage = () => (
       <h1>
         GENERADOR DE QRS
       </h1>
+      <p>
+      
+      
+    
+      </p>
       <p className={styles.intro}>
         
         {samplePageLinks.map((link, i) => (
@@ -101,6 +116,75 @@ const IndexPage = () => (
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
       />
+       <StaticImage
+        src="../images/gobiernoespaña.png"
+        loading="eager"
+        height={50}
+        width={300}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          
+          marginBottom: `var(--space-3)`,
+          
+
+         }}
+      />
+      
+      {/* <button href="https://www.patrimonionacional.es/sobre-patrimonio/conoce-nuestra-historia">
+        NOSOTROS
+        
+
+      </button>
+      <button href="https://www.patrimonionacional.es/actualidad/noticias-destacadas">
+          NOTICIAS
+      </button>
+      <button href="https://www.patrimonionacional.es/contacto">
+          CONTACTO
+      </button>
+      <button href="https://tickets.patrimonionacional.es/es">
+          VISITA
+      </button> */}
+      <p><strong>Siguenos en:</strong>
+      
+      <br></br>
+      <StaticImage
+        src="../images/linkedin.png"
+        loading="eager"
+        height={30}
+        width={30}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ marginBottom: `var(--space-3)` }}
+        // url="https://es.linkedin.com/company/patrimonionacional"
+      />
+      <br></br>
+      <StaticImage
+        src="../images/youtube.png"
+        loading="eager"
+        height={20}
+        width={20}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ marginBottom: `var(--space-3)` }}
+        // url="https://www.youtube.com/channel/UC1aAN4rDbKBeFmwKMBc_2dA"
+      />
+      <br></br>
+      <StaticImage
+        src="../images/x.png"
+        loading="eager"
+        height={20}
+        width={20}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ marginBottom: `var(--space-3)` }}
+        // url="https://x.com/PatrimNacional"
+      />
+      </p>
         {/* <br />
         Edit <code>src/pages/index.js</code> to update this page. */}
       </p>
@@ -124,6 +208,36 @@ const IndexPage = () => (
         {i !== moreLinks.length - 1 && <> · </>}
       </React.Fragment>
     ))}
+    <br></br>
+    <StaticImage
+        src="../images/thumbnail_CABECERA TANDEM.png"
+        loading="eager"
+        height={50}
+        width={800}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          marginTop: `2em`,
+          marginBottom: `var(--space-3)`
+
+
+         }}
+      />
+     <StaticImage
+        src="../images/tandem.png"
+        loading="eager"
+        height={50}
+        width={70}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          marginBottom: `var(--space-3)`, 
+          marginTop: `2em`,
+          marginLeft: `20em`,
+        }}
+      />
   </Layout>
 )
 

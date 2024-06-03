@@ -52,3 +52,15 @@
   max-width: none;
   line-height: var(--line-height-loose);
 }
+p{
+  background-color:#e95800;
+  color: white;
+ 
+  
+  
+}
+
+button{
+  background-color: #159bf3;
+  
+}

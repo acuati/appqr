@@ -7,16 +7,16 @@ import Seo from "../components/seo"
 const SecondPage = () => (
   <Layout>
     <h1>Información instititucional</h1>
-    <p>Bienvenidos a Patrimonio Nacional.</p>
+    <p>Bienvenidos a Patrimonio Nacional.
 
-<p>Somos una institución histórico-cultural única en el mundo. Cuidamos de más de 1.000 inmuebles, 170.000 piezas artísticas y 18.000 hectáreas de espacios verdes de gran riqueza medioambiental. Y lo hacemos con una doble misión: preservar y dar a conocer este valiosísimo legado y facilitar a la jefatura del Estado la labor representativa que le otorga nuestra Constitución.</p>
+<br></br>Somos una institución histórico-cultural única en el mundo. Cuidamos de más de 1.000 inmuebles, 170.000 piezas artísticas y 18.000 hectáreas de espacios verdes de gran riqueza medioambiental. Y lo hacemos con una doble misión: preservar y dar a conocer este valiosísimo legado y facilitar a la jefatura del Estado la labor representativa que le otorga nuestra Constitución.
 
-<p>Esta web es una ventana a todo este conjunto de bienes y a las actividades culturales, educativas y científicas que organizamos para su difusión. Una ventana a los 19 palacios reales, reales monasterios y casas de campo en seis comunidades autónomas diferentes. </p><p>A los parques naturales como el Monte de El Pardo o el Bosque de Riofrío.</p><p> A los 6.500 cuadros firmados, entre otros, por El Greco, Caravaggio o Velázquez.</p><p> A la programación de nuestros conciertos.</p><p> A nuestros talleres.</p><p> A nuestras publicaciones. </p>
+<br></br>Esta web es una ventana a todo este conjunto de bienes y a las actividades culturales, educativas y científicas que organizamos para su difusión. Una ventana a los 19 palacios reales, reales monasterios y casas de campo en seis comunidades autónomas diferentes. <br></br><br></br>A los parques naturales como el Monte de El Pardo o el Bosque de Riofrío.<br></br>A los 6.500 cuadros firmados, entre otros, por El Greco, Caravaggio o Velázquez.<br></br> A la programación de nuestros conciertos.<br></br> A nuestros talleres.<br></br> A nuestras publicaciones. <br></br>
 
-<p>Dar a conocer Patrimonio Nacional es dar a conocer nuestra historia. Y preservar sus bienes de forma sostenible, consciente y rigurosa es asegurar que las futuras generaciones podrán disfrutar de ellos igual que lo hacemos ahora. </p><p>Somos conscientes de la importancia de nuestra tarea. Por eso queremos abrir nuestras puertas a toda la ciudadanía y ser un punto de encuentro que sirva de elemento de cohesión en nuestra sociedad. </p>
+<br></br>Dar a conocer Patrimonio Nacional es dar a conocer nuestra historia. Y preservar sus bienes de forma sostenible, consciente y rigurosa es asegurar que las futuras generaciones podrán disfrutar de ellos igual que lo hacemos ahora. <br></br>Somos conscientes de la importancia de nuestra tarea. Por eso queremos abrir nuestras puertas a toda la ciudadanía y ser un punto de encuentro que sirva de elemento de cohesión en nuestra sociedad.
 
-<p>Ana de la Cueva</p>
-<p>Presidenta de Patrimonio Nacional</p>
+<br></br><br></br>Ana de la Cueva
+<br></br>Presidenta de Patrimonio Nacional </p>
 
 <h1>Información al público:</h1>
 
