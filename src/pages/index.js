@@ -6,6 +6,8 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 
+
+
 // const links = [
 //   {
 //     text: "Tutorial",
@@ -79,6 +81,7 @@ const IndexPage = () => (
   
   
   <Layout>
+
     <div className={styles.textCenter}>
       <StaticImage
         src="../images/patrimonionacional.png"
@@ -92,9 +95,12 @@ const IndexPage = () => (
       <h1>
         GENERADOR DE QRS
       </h1>
+
+      
+
       <p>
       
-      
+        
     
       </p>
       <p className={styles.intro}>
@@ -255,7 +261,10 @@ const IndexPage = () => (
           
         }}
       />
+
+    
   </Layout>
+
   
   )
 
