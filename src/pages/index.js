@@ -8,7 +8,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import ModalBtnAcceso from "../components/modalbtnacceso"
-
+import CollapseInformacion from "../components/collapseinformacion"
 
 // const links = [
 //   {
@@ -38,23 +38,23 @@ import ModalBtnAcceso from "../components/modalbtnacceso"
 // ]
 
 const samplePageLinks = [
-  {
-    text: "Información",
-    url: "page-2",
-    badge: false,
-    description:
-      "En esta página se encuentra tanto la información institucional de Patrimonio Nacional; como la información al público",
-  },
+  // {
+  //   text: "Información",
+  //   url: "page-2",
+  //   badge: false,
+  //   description:
+  //     "En esta página se encuentra tanto la información institucional de Patrimonio Nacional; como la información al público",
+  // },
   { 
     text: "Patrimonio Nacional", 
     url: "https://www.patrimonionacional.es/" ,
    
   },
   
-  { text: "NOSOTROS", url: "https://www.patrimonionacional.es/sobre-patrimonio/conoce-nuestra-historia" },
-  { text: "NOTICIAS", url: "https://www.patrimonionacional.es/actualidad/noticias-destacadas" },
-  { text: "CONTACTO", url: "https://www.patrimonionacional.es/contacto" },
-  { text: "VISITA", url: "https://tickets.patrimonionacional.es/es" },
+  // { text: "NOSOTROS", url: "https://www.patrimonionacional.es/sobre-patrimonio/conoce-nuestra-historia" },
+  // { text: "NOTICIAS", url: "https://www.patrimonionacional.es/actualidad/noticias-destacadas" },
+  // { text: "CONTACTO", url: "https://www.patrimonionacional.es/contacto" },
+  // { text: "VISITA", url: "https://tickets.patrimonionacional.es/es" },
   // { text: "TypeScript", url: "using-typescript" },
   // { text: "Server Side Rendering", url: "using-ssr" },
   // { text: "Deferred Static Generation", url: "using-dsg" },
@@ -74,6 +74,10 @@ const moreLinks = [
   },
   
   { text: "Política de privacidad", url: "https://www.patrimonionacional.es/politica-de-privacidad" },
+  { text: "NOSOTROS", url: "https://www.patrimonionacional.es/sobre-patrimonio/conoce-nuestra-historia" },
+  { text: "NOTICIAS", url: "https://www.patrimonionacional.es/actualidad/noticias-destacadas" },
+  { text: "CONTACTO", url: "https://www.patrimonionacional.es/contacto" },
+  { text: "VISITA", url: "https://tickets.patrimonionacional.es/es" },
 ]
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
@@ -99,7 +103,9 @@ const IndexPage = () => (
       </h1>
 
       <ModalBtnAcceso></ModalBtnAcceso>
-
+      <br></br>
+      <br></br>
+      <CollapseInformacion></CollapseInformacion>
      
 
       

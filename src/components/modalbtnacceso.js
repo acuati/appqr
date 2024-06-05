@@ -8,7 +8,7 @@ function ModalBtnAcceso(args) {
 
   return (
     <div>
-      <Button color="danger" onClick={toggle}>
+      <Button color="dark" onClick={toggle}>
         Acceso
       </Button>
       <Modal isOpen={modal} toggle={toggle} {...args}>
