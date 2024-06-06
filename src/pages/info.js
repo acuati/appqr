@@ -7,7 +7,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import CollapseInformacion from "../components/collapseinformacion"
-const SecondPage = () => (
+const Info = () => (
   <Layout>
   <CollapseInformacion></CollapseInformacion>
   
@@ -23,4 +23,4 @@ const SecondPage = () => (
 
 export const Head = () => <Seo title="Patrimonio Nacional" />
 
-export default SecondPage
+export default Info

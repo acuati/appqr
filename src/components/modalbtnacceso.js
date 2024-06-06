@@ -1,17 +1,26 @@
-import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+// import React, { useState } from 'react';
+// import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-function ModalBtnAcceso(args) {
-  const [modal, setModal] = useState(false);
 
-  const toggle = () => setModal(!modal);
 
-  return (
-    <div>
-      <Button color="dark" onClick={toggle}>
+
+
+// function ModalBtnAcceso(args) {
+  // const [modal, setModal] = useState(false);
+
+  // const toggle = () => setModal(!modal);
+
+  
+
+  // return (
+  //   <div>
+  //     <Button color="dark">
+  //       Acceso
+  //     </Button>
+      {/* <Button color="dark" onClick={toggle}>
         Acceso
-      </Button>
-      <Modal isOpen={modal} toggle={toggle} {...args}>
+      </Button> */}
+      {/* <Modal isOpen={modal} toggle={toggle} {...args}>
         <ModalHeader toggle={toggle}>ACCESO</ModalHeader>
         <ModalBody>
         <label>Usuario 
@@ -36,9 +45,9 @@ function ModalBtnAcceso(args) {
             Registro
           </Button>
         </ModalFooter>
-      </Modal>
-    </div>
-  );
-}
+      </Modal> */}
+//     </div>
+//   );
+// }
 
-export default ModalBtnAcceso;
+// export default ModalBtnAcceso;

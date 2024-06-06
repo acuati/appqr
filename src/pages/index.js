@@ -7,35 +7,12 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
-import ModalBtnAcceso from "../components/modalbtnacceso"
+// import ModalBtnAcceso from "../components/modalbtnacceso"
 import CollapseInformacion from "../components/collapseinformacion"
+import CollapseRedes from "../components/collapseredes"
+import Acceso from "./acceso"
 
-// const links = [
-//   {
-//     text: "Tutorial",
-//     url: "https://www.gatsbyjs.com/docs/tutorial",
-//     description:
-//       "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-//   },
-//   {
-//     text: "Examples",
-//     url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-//     description:
-//       "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-//   },
-//   {
-//     text: "Plugin Library",
-//     url: "https://www.gatsbyjs.com/plugins",
-//     description:
-//       "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-//   },
-//   {
-//     text: "Build and Host",
-//     url: "https://www.gatsbyjs.com/cloud",
-//     description:
-//       "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-//   },
-// ]
+
 
 const samplePageLinks = [
   // {
@@ -88,6 +65,8 @@ const IndexPage = () => (
   
   <Layout>
 
+    
+
     <div className={styles.textCenter}>
       <StaticImage
         src="../images/patrimonionacional.png"
@@ -102,36 +81,35 @@ const IndexPage = () => (
         GENERADOR DE QRS
       </h1>
 
-      <ModalBtnAcceso></ModalBtnAcceso>
-      <br></br>
-      <br></br>
-      <CollapseInformacion></CollapseInformacion>
-     
-
-      
-      <p className={styles.intro}>
-        
-        {samplePageLinks.map((link, i) => (
+      <Link to="/acceso">ACCESO</Link><br></br><br></br>
+      <CollapseInformacion></CollapseInformacion><br></br>
+      {samplePageLinks.map((link, i) => (
           <React.Fragment key={link.url}>
             <Link to={link.url}>{link.text}</Link>
             {i !== samplePageLinks.length - 1 && <> · </>}
           </React.Fragment>
         ))}
-
-        <br></br>
-        <br></br>
-
+     
+      
+      
+      <p className={styles.intro}>
       <StaticImage
         src="../images/Captura de pantalla 2024-05-21 113808.png"
         loading="eager"
-        height={804}
-        width={804}
+        height={50}
+        width={50}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
-        style={{ marginBottom: `var(--space-3)` }}
+        style={{ 
+          marginBottom: `var(--space-3)`,
+          marginTop: `1rem`,
+          marginRight: `5rem`
+          
+
+         }}
       />
-       <StaticImage
+      <StaticImage
         src="../images/gobiernoespaña.png"
         loading="eager"
         height={50}
@@ -142,80 +120,54 @@ const IndexPage = () => (
         style={{ 
           
           marginBottom: `var(--space-3)`,
+          marginTop: '1rem',
+          marginRight: '1rem'
+          
+          
           
 
          }}
       />
-      
-      {/* <button href="https://www.patrimonionacional.es/sobre-patrimonio/conoce-nuestra-historia">
-
-        NOSOTROS
-
-       
-        
-
-      </button> 
-      <button href="https://www.patrimonionacional.es/actualidad/noticias-destacadas">
-          NOTICIAS
-      </button>
-      <button href="https://www.patrimonionacional.es/contacto">
-          CONTACTO
-      </button>
-      <button href="https://tickets.patrimonionacional.es/es">
-          VISITA
-      </button>  */}
-      <p><strong>Siguenos en:</strong>
-      <br></br>
-      <br></br>
       <StaticImage
-        src="../images/x.png"
-        loading="eager"
-        height={20}
-        width={20}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-        // url="https://x.com/PatrimNacional"
-      />
-      <br></br>
-      <a href="https://x.com/PatrimNacional">x</a>
-      <br></br>
-      <br></br>
-      <StaticImage
-        src="../images/linkedin.png"
+        src="../images/tandem.png"
         loading="eager"
         height={30}
-        width={30}
+        width={50}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-        // url="https://es.linkedin.com/company/patrimonionacional"
+        style={{ 
+          marginBottom: `var(--space-3)`,
+          marginTop: `2rem`,
+          marginLeft: `3rem`
+         
+          
+        }}
       />
+       
       
-      <a href="https://es.linkedin.com/company/patrimonionacional">linkedin</a>
-      <br></br>
+      
       <StaticImage
-        src="../images/youtube.png"
+        src="../images/thumbnail_CABECERA TANDEM.png"
         loading="eager"
-        height={20}
-        width={20}
+        height={70}
+        width={800}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-        // url="https://www.youtube.com/channel/UC1aAN4rDbKBeFmwKMBc_2dA"
+        style={{ 
+          marginTop: `2em`,
+          marginLeft: `0em`,
+          marginBottom: `var(--space-3)`
+
+
+         }}
       />
-      <a href="https://www.youtube.com/channel/UC1aAN4rDbKBeFmwKMBc_2dA">youtube</a>
-      <br></br>
+
+
+
+   
       
-      
-      
-      
-      </p>
-        {/* <br />
-        Edit <code>src/pages/index.js</code> to update this page. */}
       </p>
     </div>
     {/* <ul className={styles.list}>
@@ -238,36 +190,8 @@ const IndexPage = () => (
       </React.Fragment>
     ))}
     <br></br>
-    <StaticImage
-        src="../images/thumbnail_CABECERA TANDEM.png"
-        loading="eager"
-        height={50}
-        width={800}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          marginTop: `2em`,
-          marginBottom: `var(--space-3)`
-
-
-         }}
-      />
-     <StaticImage
-        src="../images/tandem.png"
-        loading="eager"
-        height={30}
-        width={50}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          marginBottom: `var(--space-3)`,
-          marginLeft: `8em`, 
-          
-        }}
-      />
- 
+    <br></br>
+    <CollapseRedes></CollapseRedes>
     
   </Layout>
   
