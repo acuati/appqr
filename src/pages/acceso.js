@@ -4,9 +4,11 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import CollapseRedes from '../components/collapseredes';
 
 const Acceso = () => (
   <Layout>
+    <CollapseRedes></CollapseRedes>
     <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
@@ -21,6 +23,8 @@ const Acceso = () => (
           // marginRight: '20rem' 
         }}
       />
+
+    
       
   
         
