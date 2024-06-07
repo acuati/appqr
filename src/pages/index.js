@@ -14,6 +14,9 @@ import Acceso from "./acceso"
 
 
 
+
+
+
 const samplePageLinks = [
   // {
   //   text: "Información",
@@ -104,7 +107,8 @@ const IndexPage = () => (
         style={{ 
           marginBottom: `var(--space-3)`,
           marginTop: `1rem`,
-          marginRight: `5rem`
+          marginRight: `5rem`,
+          marginLeft: `5rem`
           
 
          }}
@@ -121,7 +125,8 @@ const IndexPage = () => (
           
           marginBottom: `var(--space-3)`,
           marginTop: '1rem',
-          marginRight: '1rem'
+          marginRight: '0rem',
+          marginLeft: '0rem'
           
           
           
@@ -139,7 +144,8 @@ const IndexPage = () => (
         style={{ 
           marginBottom: `var(--space-3)`,
           marginTop: `2rem`,
-          marginLeft: `3rem`
+          marginLeft: `3rem`,
+          marginRight: `3rem`
          
           
         }}

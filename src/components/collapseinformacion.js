@@ -47,7 +47,7 @@ function CollapseInformacion(args) {
             marginTop:'1rem',
             marginBottom:'1rem',
             marginLeft:'1rem',
-            marginRight:'30rem'
+            marginRight:'1rem'
            }}>
             GENERAL
            </Button>
@@ -71,7 +71,7 @@ function CollapseInformacion(args) {
                 marginTop:'1rem',
                 marginBottom:'1rem',
                 marginLeft:'1rem',
-                marginRight:'30rem'
+                marginRight:'1rem'
               }}>
                Biblioteca Real
               </Button>
@@ -95,7 +95,7 @@ function CollapseInformacion(args) {
                 marginTop:'1rem',
                 marginBottom:'1rem',
                 marginLeft:'1rem',
-                marginRight:'30rem'
+                marginRight:'1rem'
               }}>
                Archivo General de Palacio
               </Button>
@@ -119,7 +119,7 @@ function CollapseInformacion(args) {
                 marginTop:'1rem',
                 marginBottom:'1rem',
                 marginLeft:'1rem',
-                marginRight:'30rem'
+                marginRight:'1rem'
               }}>
                 Departamento de comunicación
               </Button>
@@ -143,7 +143,7 @@ function CollapseInformacion(args) {
                 marginTop:'1rem',
                 marginBottom:'1rem',
                 marginLeft:'1rem',
-                marginRight:'30rem'
+                marginRight:'1rem'
               }}>
                 Departamento de educación
               </Button>
@@ -167,7 +167,7 @@ function CollapseInformacion(args) {
                 marginTop:'1rem',
                 marginBottom:'1rem',
                 marginLeft:'1rem',
-                marginRight:'30rem'
+                marginRight:'1rem'
               }}>
                 DELEGACIONES
               </Button>
@@ -208,7 +208,7 @@ function CollapseInformacion(args) {
                 marginTop:'1rem',
                 marginBottom:'1rem',
                 marginLeft:'1rem',
-                marginRight:'30rem'
+                marginRight:'1rem'
               }}>
                 SOLICITUD DE QUEJAS, SUGERENCIAS Y FELICITACIONES
               </Button>
@@ -232,7 +232,7 @@ function CollapseInformacion(args) {
                 marginTop:'1rem',
                 marginBottom:'1rem',
                 marginLeft:'1rem',
-                marginRight:'30rem'
+                marginRight:'1rem'
               }}>
                SISTEMA INTERNO DE INFORMACIÓN
               </Button>

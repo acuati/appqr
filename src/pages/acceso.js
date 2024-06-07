@@ -10,19 +10,20 @@ const Acceso = () => (
     <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
-        height={303}
-        width={303}
+        height={100}
+        width={100}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
         style={{ 
-          marginBottom: `var(--space-3)`,
-          marginLeft: `15rem`, 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
         }}
       />
       
   
-        <br></br>
+        
   
   <Link to="/">Volver al inicio</Link>
   </Layout>
