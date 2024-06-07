@@ -5,7 +5,8 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import CollapseRedes from '../components/collapseredes';
-
+import ButtonAcceso from '../components/buttonacceso';
+import ButtonSegacess from '../components/buttonsegacess';
 const Acceso = () => (
   <Layout>
     <CollapseRedes></CollapseRedes>
@@ -23,6 +24,9 @@ const Acceso = () => (
           // marginRight: '20rem' 
         }}
       />
+    
+
+    
 
     
       
@@ -30,6 +34,21 @@ const Acceso = () => (
         
   
   <Link to="/">Volver al inicio</Link>
+  
+ 
+
+  <br></br>
+  <br></br>
+  <ButtonAcceso></ButtonAcceso>
+  
+  <br></br>
+  <br></br>
+  <ButtonSegacess></ButtonSegacess>
+
+  
+  <br></br>
+  <br></br>
+
   </Layout>
 )
   
