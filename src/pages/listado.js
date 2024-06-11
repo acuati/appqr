@@ -5,11 +5,11 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TableListado from '../components/tablelistado';
+// import { StaticImage } from "gatsby-plugin-image"
 const Listado = () => (
   <Layout>
     <TableListado></TableListado>
 
-    
 
     
       
@@ -23,6 +23,8 @@ const Listado = () => (
  
 
   </Layout>
+  
+  
 )
   
 

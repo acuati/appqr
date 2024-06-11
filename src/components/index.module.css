@@ -70,5 +70,25 @@ p{
 a{
   text-align: left;
 }
+h1{
+  text-align: center;
+}
+
+form {
+  text-align: left;
+}
+
+label {
+  margin-top: 2em;
+  margin-right: 25em;
+}
+
+input{
+  margin-left: 20em;
+}
+button {
+  
+  margin-left: 2em;
+}
 
 
