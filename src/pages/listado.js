@@ -16,7 +16,7 @@ const Listado = () => (
   
         
   
-  <Link to="/">Volver al inicio</Link>
+  <Link to="/acceso">Volver a atrás</Link>
   
  
 

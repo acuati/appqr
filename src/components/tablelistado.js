@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import React, { useState } from 'react';
 import { Table, Collapse, Button, CardBody, Card } from 'reactstrap';
 import { StaticImage } from "gatsby-plugin-image"
+
 function TableListado(args) {
 return(
 
@@ -32,8 +33,34 @@ return(
   </thead>
   <tbody>
     <tr>
-      <th scope="row">
-         <strong>QR 1</strong><p>+info</p>
+      <th scope="row"> 
+         
+      <Button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="+info">
+
+        <StaticImage
+            src="../images/qr-color-palaciodearanjuez.png"
+            loading="eager"
+           height={50}
+           width={50}
+           quality={95}
+           formats={["auto", "webp", "avif"]}
+           alt=""
+
+           
+        
+        
+        
+        />
+        {/* Qr-ejemplo */}
+        <Link to="/qr1">QR1</Link>
+        
+      </Button>
+
+         
+       
+        
+         
+         
       </th>
       <td>
         <strong>Jardín de la Isla</strong>
@@ -48,7 +75,24 @@ return(
     </tr>
     <tr>
       <th scope="row">
-      <strong>QR 2</strong><p>+info</p>
+      <Button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="+info">
+
+        <StaticImage
+            src="../images/qr-color-jardin-del-principe.png"
+            loading="eager"
+           height={50}
+           width={50}
+           quality={95}
+           formats={["auto", "webp", "avif"]}
+           alt=""
+        
+        
+        
+        />
+        {/* Qr-ejemplo */}
+        <Link to="/qr2">QR2</Link>
+        
+      </Button>
       </th>
       <td>
       <strong>Jardín del Príncipe</strong>
@@ -63,7 +107,24 @@ return(
     </tr>
     <tr>
       <th scope="row">
-      <strong>QR 3</strong><p>+info</p>
+      <Button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="+info">
+
+        <StaticImage
+            src="../images/qr-color-parterre.png"
+            loading="eager"
+           height={50}
+           width={50}
+           quality={95}
+           formats={["auto", "webp", "avif"]}
+           alt=""
+        
+        
+        
+        />
+        {/* Qr-ejemplo */}
+        <Link to="/qr3">QR3</Link>
+        
+      </Button>
       </th>
       <td>
       <strong>Jardín del Parterre</strong>
@@ -78,7 +139,24 @@ return(
     </tr>
     <tr>
       <th scope="row">
-      <strong>QR 4</strong><p>+info</p>
+      <Button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="+info">
+
+        <StaticImage
+            src="../images/qr-color-palaciodearanjuez.png"
+            loading="eager"
+           height={50}
+           width={50}
+           quality={95}
+           formats={["auto", "webp", "avif"]}
+           alt=""
+        
+        
+        
+        />
+        {/* Qr-ejemplo */}
+        <Link to="/qr4">QR4</Link>
+        
+      </Button>
       </th>
       <td>
       <strong>Jardín de Isabel II</strong>
