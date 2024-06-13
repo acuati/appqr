@@ -81,12 +81,13 @@ const Crear = () => {
             onChange={handleColorChange}
           />
   
-          <button type="submit">Crear QR</button>
+          <button type="submit">Crear & Previsualizar QR</button>
         </form>
   
         {showQRCode && (
           <div id="qrCodeContainer">
-            <p>Su QR se ha creado correctamente para:</p>
+            <p>* Las creaciones en esta app se guardan automáticamente con un logo de patrimonio nacional en su interior y conservando sus datos seleccionados en la página de listado. </p>
+            <p>Aquí tiene la previsualización de su QR, que se ha creado correctamente para:</p>
             <h1>{inputData}</h1>
             <QRCode
               value={inputData}
