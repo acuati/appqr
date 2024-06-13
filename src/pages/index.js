@@ -84,8 +84,8 @@ const IndexPage = () => (
         GENERADOR DE QRS
       </h1>
 
-      <Link to="/acceso">ACCESO</Link><br></br><br></br>
-      <CollapseInformacion></CollapseInformacion><br></br>
+      <Link to="/acceso">ACCESO</Link>
+      <CollapseInformacion></CollapseInformacion>
       {samplePageLinks.map((link, i) => (
           <React.Fragment key={link.url}>
             <Link to={link.url}>{link.text}</Link>
