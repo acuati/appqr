@@ -33,7 +33,7 @@ const Acceso = () => (
   
         
   
-  <Link to="/">Volver al inicio</Link>
+  <Link to="/">Cerrar sesión</Link>
   
  
 
