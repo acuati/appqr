@@ -74,23 +74,16 @@ h1{
   text-align: center;
 }
 
-form {
-  text-align: left;
-}
 
-label {
+h2{
+  text-align: center;
+}
+div{
   margin-top: 2em;
-  margin-left: 6em;
-  margin-right: 2em;
+  margin-bottom: 2em;
+  
 }
 
-input{
-  margin-left: 2em;
-}
-button {
- margin-right: 20em;
- margin-left: 2em;
-}
 
 
 /* .collapseinformacion {
