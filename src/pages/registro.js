@@ -12,47 +12,38 @@ const Registro = () => (
   <Layout>
    
    <h2>Registro de usuarios</h2>
-        <form className="login-form">
-          <label htmlFor="username">* Nombre:</label>
+
+   <form>
+    <div>
+    <label htmlFor="username">* Nombre de usuario:</label>
+    <input type="username" id="username" name="username" required/>
+    </div>
+    <div>
+    <label htmlFor="username">* Delegación:</label>
+    <input type="username" id="username" name="username" required />
+    </div>
+    <div>
+    <label htmlFor="email">* Email:</label>
+    <input type="email" id="username" name="username" required />
+    </div>
+    <div>
+    <label htmlFor="email">* Confirmar email:</label>
+    <input type="email" id="username" name="username" required />
+    </div>
+    <div>
+    <label htmlFor="password">* Contraseña:</label>
+    <input type="password" id="username" name="username" required />
+    </div>
+    <div>
+    <label htmlFor="password">* Confirmar contraseña:</label>
+    <input type="password" id="username" name="username" required />
+    </div>
+    <button>REGISTRAR</button>
+
+   </form>
+        
          
-          <input type="text" id="username" name="username" required />
-          
-        </form>
-        <form className="login-form">
-        <label htmlFor="username">*  Delegación:</label>
-       
-        <input type="text" id="username" name="username" required />
         
-        </form>
-        <form className="login-form">
-        <label htmlFor="username">* Correo electrónico:</label>
-      
-          
-          <input type="email" id="username" name="username" required />
-        
-        </form>
-        <form className="login-form">
-        <label htmlFor="username">* Confirmar correo electrónico:</label>
-        
-          
-          <input type="email" id="username" name="username" required />
-        
-        </form>
-        <form className="login-form">
-        <label htmlFor="username">* Contraseña:</label>
-        
-        <input type="password" id="username" name="username" required />
-        
-        </form>
-        <form className="login-form">
-          
-        <label htmlFor="username">* Confirmar contraseña:</label>
-        
-          
-          <input type="password" id="username" name="username" required />
-       
-        <button type="submit">Ingresar</button>
-        </form>
          
 
           

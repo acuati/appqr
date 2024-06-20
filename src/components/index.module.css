@@ -1,8 +1,67 @@
+/* index.module.css */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #f5f5f5;
+}
+
+.logo {
+  margin-right: 1rem;
+}
+
+.title {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.loginLink {
+  margin-left: 1rem;
+}
+
+.links, .moreLinks {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.sampleLink, .moreLink {
+  color: #007acc;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.imageGallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.image {
+  margin: 1rem;
+}
+
+.headerImage {
+  margin: 2rem 0;
+  width: 100%;
+}
+
+p{
+  background-color: #221f1f;
+  color: antiquewhite;
+}
+
+
+
+
+/* 
+
 .list {
   display: grid;
-  margin: 0;
+  margin: 0; */
   /* https://css-tricks.com/responsive-layouts-fewer-media-queries/ */
-  --w: 280px;
+  /* --w: 280px;
   --n: 2;
   gap: var(--size-gap);
   grid-template-columns: repeat(
@@ -11,8 +70,8 @@
   );
   margin-bottom: var(--size-gap);
   margin-top: var(--size-gap);
-}
-
+} */
+/* 
 .listItem {
   margin: 0;
 }
@@ -27,9 +86,9 @@
 
 .listItem:nth-child(3)::marker {
   color: #8eb814;
-}
+} */
 
-.listItem:nth-child(4)::marker {
+/* .listItem:nth-child(4)::marker {
   color: #663399;
 }
 
@@ -42,9 +101,9 @@
   color: var(--color-text);
   margin-bottom: 0;
   margin-top: var(--space-1);
-}
+} */
 
-.textCenter {
+/* .textCenter {
   text-align: center;
 }
 
@@ -59,7 +118,7 @@ p{
  
   
   
-}
+} */
 
 
 
@@ -67,23 +126,26 @@ p{
   background-color: #159bf3;
   
 } */
-a{
-  text-align: left;
-}
-h1{
-  text-align: center;
-}
 
-
-h2{
-  text-align: center;
-}
-div{
-  margin-top: 2em;
-  margin-bottom: 2em;
+/* h1{
   
+  text-align: center;
 }
 
+button{
+  margin:2em
+}
+
+form{
+  margin: 2em
+}
+label{
+  margin: 2em
+}
+
+input{
+  margin: 2em
+} */
 
 
 /* .collapseinformacion {
