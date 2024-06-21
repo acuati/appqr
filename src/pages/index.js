@@ -7,6 +7,10 @@ import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import CollapseInformacion from "../components/collapseinformacion"
 import CollapseRedes from "../components/collapseredes"
+import ButonContacto from "../components/butoncontacto"
+import ButonNosotros from "../components/butonnosotros"
+import ButonNoticias from "../components/butonnoticias"
+import ButonVisita from "../components/butonvisita"
 
 const samplePageLinks = [
   { 
@@ -19,6 +23,7 @@ const moreLinks = [
   { text: "Aviso legal", url: "https://www.patrimonionacional.es/aviso-legal" },
   { text: "Accesibilidad", url: "https://www.patrimonionacional.es/accesibilidad" },
   { text: "Política de privacidad", url: "https://www.patrimonionacional.es/politica-de-privacidad" },
+
   { text: "NOSOTROS", url: "https://www.patrimonionacional.es/sobre-patrimonio/conoce-nuestra-historia" },
   { text: "NOTICIAS", url: "https://www.patrimonionacional.es/actualidad/noticias-destacadas" },
   { text: "CONTACTO", url: "https://www.patrimonionacional.es/contacto" },
@@ -39,9 +44,16 @@ const IndexPage = () => (
         alt="Patrimonio Nacional"
         className={styles.logo}
       />
+      
+    <ButonNoticias></ButonNoticias>
+    
       <h1 className={styles.title}>GENERADOR DE QRS</h1>
+      <ButonNosotros></ButonNosotros>
       <Link to="/login" className={styles.loginLink}>LOGIN</Link>
+      
     </div>
+    
+
 
     <div className={styles.links}>
       {samplePageLinks.map((link, i) => (
@@ -51,6 +63,8 @@ const IndexPage = () => (
         </React.Fragment>
       ))}
     </div>
+
+   
 
     <CollapseInformacion />
 
@@ -95,7 +109,12 @@ const IndexPage = () => (
         formats={["auto", "webp", "avif"]}
         alt="Cabecera Tandem"
         className={styles.headerImage}
+        
       />
+      
+      
+      <ButonNosotros></ButonNosotros><ButonNoticias></ButonNoticias><ButonContacto></ButonContacto><ButonVisita></ButonVisita>
+      
     </div>
 
     <div className={styles.moreLinks}>
@@ -106,6 +125,9 @@ const IndexPage = () => (
         </React.Fragment>
       ))}
     </div>
+    
+ 
+   
     
     <CollapseRedes />
   </Layout>
