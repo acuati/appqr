@@ -8,7 +8,7 @@ return(
     <Button
       color="primary"
     >
-      <Link to="/crear">Crear QR</Link>
+      <Link href='https://tickets.patrimonionacional.es/es'>VISITA</Link>
     </Button>
     </div>
 

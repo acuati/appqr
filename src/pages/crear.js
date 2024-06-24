@@ -47,9 +47,11 @@ const Crear = () => {
         <Seo title="Patrimonio Nacional" />
   
         <form onSubmit={generateQRCode}>
+          <div>
           <label htmlFor="inputData">
             Introduce texto ó URL del QR: 
           </label>
+          <div>
           <input
             type="text"
             id="inputData"
@@ -57,10 +59,14 @@ const Crear = () => {
             value={inputData}
             onChange={handleInputChange}
           />
-  
+          </div>
+          </div>
+          <div>
           <label htmlFor="qrCodeSize">
             Seleccione el tamaño del QR (1-1024):
           </label>
+          </div>
+          <div>
           <input
             type="number"
             id="qrCodeSize"
@@ -70,16 +76,20 @@ const Crear = () => {
             min={1}
             max={1024}
           />
-  
+          </div>
+          <div>
           <label htmlFor="qrCodeColor">
             Seleccione el color del QR:
           </label>
+          </div>
+          <div>
           <input
             type="color"
             id="qrCodeColor"
             value={qrCodeColor}
             onChange={handleColorChange}
           />
+          </div>
   
           <button type="submit">Crear & Previsualizar QR</button>
         </form>

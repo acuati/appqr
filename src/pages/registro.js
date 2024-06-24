@@ -16,26 +16,38 @@ const Registro = () => (
    <form>
     <div>
     <label htmlFor="username">* Nombre de usuario:</label>
+    </div>
+    <div>
     <input type="username" id="username" name="username" required/>
     </div>
     <div>
     <label htmlFor="username">* Delegación:</label>
+    </div>
+    <div>
     <input type="username" id="username" name="username" required />
     </div>
     <div>
     <label htmlFor="email">* Email:</label>
+    </div>
+    <div>
     <input type="email" id="username" name="username" required />
     </div>
     <div>
     <label htmlFor="email">* Confirmar email:</label>
+    </div>
+    <div>
     <input type="email" id="username" name="username" required />
     </div>
     <div>
     <label htmlFor="password">* Contraseña:</label>
+    </div>
+    <div>
     <input type="password" id="username" name="username" required />
     </div>
     <div>
     <label htmlFor="password">* Confirmar contraseña:</label>
+    </div>
+    <div>
     <input type="password" id="username" name="username" required />
     </div>
     <button>REGISTRAR</button>

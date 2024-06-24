@@ -14,13 +14,23 @@ const Login = () => (
     <form>
       <label>
         Nombre de usuario
+        <div></div>
         <input type='text'></input>
+        
+        
       </label>
+      <div>
       <label>
         Credenciales de acceso
+        <div></div>
         <input type='password'></input>
+        
+       
       </label>
+      </div>
+     
       <Link to="/acceso">ACCEDER</Link>
+      
       
     </form>
    

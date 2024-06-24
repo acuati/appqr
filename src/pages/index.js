@@ -24,10 +24,10 @@ const moreLinks = [
   { text: "Accesibilidad", url: "https://www.patrimonionacional.es/accesibilidad" },
   { text: "Política de privacidad", url: "https://www.patrimonionacional.es/politica-de-privacidad" },
 
-  { text: "NOSOTROS", url: "https://www.patrimonionacional.es/sobre-patrimonio/conoce-nuestra-historia" },
-  { text: "NOTICIAS", url: "https://www.patrimonionacional.es/actualidad/noticias-destacadas" },
-  { text: "CONTACTO", url: "https://www.patrimonionacional.es/contacto" },
-  { text: "VISITA", url: "https://tickets.patrimonionacional.es/es" },
+  // { text: "NOSOTROS", url: "https://www.patrimonionacional.es/sobre-patrimonio/conoce-nuestra-historia" },
+  // { text: "NOTICIAS", url: "https://www.patrimonionacional.es/actualidad/noticias-destacadas" },
+  // { text: "CONTACTO", url: "https://www.patrimonionacional.es/contacto" },
+  // { text: "VISITA", url: "https://tickets.patrimonionacional.es/es" },
 ]
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
@@ -35,6 +35,7 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 const IndexPage = () => (
   <Layout>
     <div className={styles.header}>
+      
       <StaticImage
         src="../images/patrimonionacional.png"
         loading="eager"
@@ -45,23 +46,26 @@ const IndexPage = () => (
         className={styles.logo}
       />
       
-    <ButonNoticias></ButonNoticias>
+      <ButonNosotros></ButonNosotros>
     
       <h1 className={styles.title}>GENERADOR DE QRS</h1>
-      <ButonNosotros></ButonNosotros>
-      <Link to="/login" className={styles.loginLink}>LOGIN</Link>
       
+      <ButonNoticias></ButonNoticias>
+      <Link to="/login" className={styles.loginLink}>LOGIN</Link>
+     
     </div>
     
 
 
     <div className={styles.links}>
+    <ButonVisita></ButonVisita>
       {samplePageLinks.map((link, i) => (
         <React.Fragment key={link.url}>
           <a href={link.url} className={styles.sampleLink}>{link.text}</a>
           {i !== samplePageLinks.length - 1 && <> · </>}
         </React.Fragment>
       ))}
+      <ButonContacto></ButonContacto>
     </div>
 
    
@@ -113,7 +117,7 @@ const IndexPage = () => (
       />
       
       
-      <ButonNosotros></ButonNosotros><ButonNoticias></ButonNoticias><ButonContacto></ButonContacto><ButonVisita></ButonVisita>
+      
       
     </div>
 
