@@ -22,7 +22,7 @@ const samplePageLinks = [
 const moreLinks = [
   { text: "Aviso legal", url: "https://www.patrimonionacional.es/aviso-legal" },
   { text: "Accesibilidad", url: "https://www.patrimonionacional.es/accesibilidad" },
-  { text: "Política de privacidad", url: "https://www.patrimonionacional.es/politica-de-privacidad" },
+  { text: "Política de Privacidad", url: "https://www.patrimonionacional.es/politica-de-privacidad" },
 
   // { text: "NOSOTROS", url: "https://www.patrimonionacional.es/sobre-patrimonio/conoce-nuestra-historia" },
   // { text: "NOTICIAS", url: "https://www.patrimonionacional.es/actualidad/noticias-destacadas" },

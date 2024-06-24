@@ -6,10 +6,30 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import CollapseRedes from '../components/collapseredes';
+import CollapseAdvertencias from '../components/collapseadvertencias';
+import CollapseAccesos from '../components/collapseaccesos';
 import ButtonAcceso from '../components/buttonacceso';
 import ButtonSegacess from '../components/buttonsegacess';
+import ButonAccesibilidad from '../components/butonaccesibilidad';
+import ButonAviso from '../components/butonaviso';
+import ButonPolitica from '../components/butonpolitica';
 const Acceso = () => (
   <Layout>
+    <CollapseAccesos></CollapseAccesos>
+     <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+        height={100}
+        width={100}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
     <CollapseRedes></CollapseRedes>
     <StaticImage
         src="../images/Qr-ejemplo.png"
@@ -25,32 +45,46 @@ const Acceso = () => (
           // marginRight: '20rem' 
         }}
       />
-    
+    <CollapseAdvertencias></CollapseAdvertencias>
+    <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+        height={100}
+        width={100}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
 
-    
-
-    
       
   
-        
+
+
+      
+    
   
-  <Link to="/">Cerrar sesión</Link>
+  
+
+
+
+       
+  
+
   
  
-
-  <br></br>
-  <br></br>
-  <ButtonAcceso></ButtonAcceso>
   
-  <br></br>
-  <br></br>
-  <ButtonSegacess></ButtonSegacess>
-
   
-  <br></br>
-  <br></br>
+  
+        <Link to="/">Salir</Link>
+ 
 
   </Layout>
+  
 )
   
 
