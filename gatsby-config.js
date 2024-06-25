@@ -10,8 +10,8 @@
 module.exports = {
   siteMetadata: {
     title: `patrimonionacional.es`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Application de generador de QRS para todo patrimonio nacional. `,
+    author: `MR. Teclas 2.0`,
     siteUrl: `https://www.patrimonionacional.es/`,
   },
   plugins: [

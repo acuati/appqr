@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Link, navigate } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-
+import CollapseLogin from '../components/collapselogin';
+import CollapseRedes from '../components/collapseredes';
+import CollapseAdvertencias from '../components/collapseadvertencias';
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -30,40 +33,91 @@ const Login = () => {
 
   return (
     <Layout>
+       <CollapseRedes></CollapseRedes>
+       <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+        height={100}
+        width={100}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
+      <CollapseAdvertencias></CollapseAdvertencias>
       <form onSubmit={handleLogin}>
         <label>
-          Nombre de usuario
+          * Nombre de usuario
           <div></div>
           <input 
             type='text' 
             value={username} 
-            onChange={(e) => setUsername(e.target.value)} 
+            onChange={(e) => setUsername(e.target.value)}
+            required 
           />
         </label>
         <div>
           <label>
-            Credenciales de acceso
+            * Credenciales de acceso
             <div></div>
             <input 
               type='password' 
               value={password} 
-              onChange={(e) => setPassword(e.target.value)} 
+              onChange={(e) => setPassword(e.target.value)}
+              required 
             />
           </label>
         </div>
         {error && <p style={{ color: 'red' }}>{error}</p>}
-        <button type="submit">
-          <Link to="/acceso">
-          ACCEDER
-          </Link>
-        </button>
+        
+        <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+        height={100}
+        width={100}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
+
+<Link to="/registro">Registrarse</Link>
+
+<StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+        height={100}
+        width={100}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
+
+          <CollapseLogin></CollapseLogin>
+
+
+        
+        
       </form>
-      <form>
-        <Link to="/registro">Registrarse</Link>
-      </form>
-      <form>
+     
+        
+   
         <Link to="/">Volver al inicio</Link>
-      </form>
+       
+      
     </Layout>
   );
 };
