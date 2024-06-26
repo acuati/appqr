@@ -12,6 +12,10 @@ import ButonNosotros from "../components/butonnosotros"
 import ButonNoticias from "../components/butonnoticias"
 import ButonVisita from "../components/butonvisita"
 
+
+
+
+
 const samplePageLinks = [
   { 
     text: "Patrimonio Nacional", 
@@ -33,7 +37,10 @@ const moreLinks = [
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = () => (
+  
   <Layout>
+    
+
     <div className={styles.header}>
       
       <StaticImage
@@ -45,21 +52,37 @@ const IndexPage = () => (
         alt="Patrimonio Nacional"
         className={styles.logo}
       />
+      <Link to="/login" className={styles.loginLink}>LOGIN</Link>
       <StaticImage
-        src="../images/Qr-ejemplo.png"
+        src="../images/patrimonionacional.png"
         loading="eager"
-       
         width={64}
         quality={95}
         formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
+        alt="Patrimonio Nacional"
+        className={styles.logo}
       />
-      
+      <CollapseInformacion />
+    
+     {/* GENERADOR DE QRS  */}
+    
+      <h1>GENERADOR
+      <button>
+      <StaticImage
+        src="../images/flecha.png"
+        loading="eager"
+        width={30}
+        height={30}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt="Patrimonio Nacional"
+        className={styles.logo}
+      />
+
+      </button>
+
+      </h1>
+      {/* <h1 className={styles.title}>GENERADOR DE QRS</h1> */}
       <ButonNosotros></ButonNosotros>
       <StaticImage
         src="../images/Qr-ejemplo.png"
@@ -75,13 +98,39 @@ const IndexPage = () => (
           // marginRight: '20rem' 
         }}
       />
-    
-      <h1>GENERADOR DE QRS</h1>
-      {/* <h1 className={styles.title}>GENERADOR DE QRS</h1> */}
       <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
-        
+      
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
+      <ButonContacto></ButonContacto>
+      <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+       
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
+      <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+       
         width={64}
         quality={95}
         formats={["auto", "webp", "avif"]}
@@ -93,6 +142,7 @@ const IndexPage = () => (
         }}
       />
       <ButonNoticias></ButonNoticias>
+      
       <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
@@ -121,7 +171,7 @@ const IndexPage = () => (
           // marginRight: '20rem' 
         }}
       />
-      <Link to="/login" className={styles.loginLink}>LOGIN</Link>
+      
      
     
      
@@ -131,34 +181,8 @@ const IndexPage = () => (
     
     <div className={styles.links}>
     <ButonVisita></ButonVisita>
-    <StaticImage
-        src="../images/Qr-ejemplo.png"
-        loading="eager"
-       
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      />
-      <StaticImage
-        src="../images/Qr-ejemplo.png"
-        loading="eager"
-        
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      />
+    
+     
       {samplePageLinks.map((link, i) => (
         <React.Fragment key={link.url}>
           <a href={link.url} className={styles.sampleLink}>{link.text}</a>
@@ -166,29 +190,22 @@ const IndexPage = () => (
         </React.Fragment>
       ))}
       
-      <ButonContacto></ButonContacto>
-      <StaticImage
-        src="../images/Qr-ejemplo.png"
-        loading="eager"
+     
+     
       
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      />
+      
        
     </div>
 
-   
-        
-    <CollapseInformacion />
+    
 
+  
+    
+    
     <div className={styles.imageGallery}>
+      
+      <p>
+
       <StaticImage
         src="../images/Captura de pantalla 2024-05-21 113808.png"
         loading="eager"
@@ -199,7 +216,7 @@ const IndexPage = () => (
         alt="Captura"
         className={styles.image}
       />
-      <p><StaticImage
+      <StaticImage
         src="../images/gobiernoespaña.png"
         loading="eager"
         height={50}
@@ -208,18 +225,23 @@ const IndexPage = () => (
         formats={["auto", "webp", "avif"]}
         alt="Gobierno España"
         className={styles.image}
-      /></p>
-      
+      />
       <StaticImage
         src="../images/tandem.png"
         loading="eager"
-        height={70}
-        width={95}
+        height={90}
+        width={125}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt="Tandem"
         className={styles.image}
       />
+     
+      
+    
+      </p>
+      
+     
       <StaticImage
         src="../images/thumbnail_CABECERA TANDEM.png"
         loading="eager"
@@ -311,6 +333,32 @@ const IndexPage = () => (
         }}
       />
         <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
+      <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
+      <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
         width={64}

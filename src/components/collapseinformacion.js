@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
-
+import { StaticImage } from "gatsby-plugin-image"
+import * as styles from "../components/index.module.css"
 function CollapseInformacion(args) {
   const [collapseStates, setCollapseStates] = useState({});
 
@@ -33,7 +34,11 @@ function CollapseInformacion(args) {
           </CardBody>
         </Card>
       </Collapse>
-      <br></br>
+
+      <a> & </a>
+
+      
+      
 
       <Button color="primary" onClick={() => toggleCollapse('publico')} style={{ marginBottom: '1rem' }}>
       Información al público
