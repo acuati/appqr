@@ -16,8 +16,8 @@ const Qr2 = () => (
     <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
-        height={100}
-        width={100}
+        
+        width={64}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
@@ -31,8 +31,8 @@ const Qr2 = () => (
     <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
-        height={100}
-        width={100}
+        
+        width={64}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
@@ -47,8 +47,8 @@ const Qr2 = () => (
     <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
-        height={100}
-        width={100}
+       
+        width={64}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
@@ -75,8 +75,8 @@ const Qr2 = () => (
   <StaticImage
         src="../images/qr-color-jardin-del-principe.png"
         loading="eager"
-        height={500}
-        width={515}
+        height={400}
+        width={400}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""

@@ -59,11 +59,10 @@ const Registro = () => {
   return (
     <Layout>
       <CollapseRedes></CollapseRedes>
-       <StaticImage
+      <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
-        height={100}
-        width={100}
+        width={64}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
@@ -162,8 +161,20 @@ const Registro = () => {
         <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
-        height={100}
-        width={100}
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
+       <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+        width={64}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""

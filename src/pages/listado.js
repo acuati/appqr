@@ -15,8 +15,7 @@ const Listado = () => (
     <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
-        height={100}
-        width={100}
+        width={64}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
@@ -30,8 +29,7 @@ const Listado = () => (
     <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
-        height={100}
-        width={100}
+        width={64}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""

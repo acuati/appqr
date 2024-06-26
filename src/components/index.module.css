@@ -1,19 +1,20 @@
 /* index.module.css */
-.header {
+
+/* .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
-  background-color: #f5f5f5;
-}
+  padding: 1rem; */
+  /* background-color: #f5f5f5; */
+/* } */
 
-.logo {
+/* .logo {
   margin-right: 1rem;
 }
 
 .title {
   flex-grow: 1;
-  text-align: center;
+  text-align: left;
 }
 
 .loginLink {
@@ -21,7 +22,7 @@
 }
 
 .links, .moreLinks {
-  text-align: center;
+  text-align: left;
   margin: 1rem 0;
 }
 
@@ -45,7 +46,7 @@
 .headerImage {
   margin: 1rem 0;
   width: 100%;
-}
+} */
 
 p{
   background-color: #221f1f;

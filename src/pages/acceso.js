@@ -16,11 +16,10 @@ import ButonPolitica from '../components/butonpolitica';
 const Acceso = () => (
   <Layout>
     <CollapseAccesos></CollapseAccesos>
-     <StaticImage
+    <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
-        height={100}
-        width={100}
+        width={64}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
@@ -34,8 +33,7 @@ const Acceso = () => (
     <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
-        height={100}
-        width={100}
+        width={64}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
@@ -49,8 +47,7 @@ const Acceso = () => (
     <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
-        height={100}
-        width={100}
+        width={64}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""

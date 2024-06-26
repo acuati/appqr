@@ -48,11 +48,10 @@ const Crear = () => {
       <Layout>
         <Seo title="Patrimonio Nacional" />
         <CollapseRedes></CollapseRedes>
-    <StaticImage
+        <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
-        height={100}
-        width={100}
+        width={64}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
@@ -66,8 +65,7 @@ const Crear = () => {
     <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
-        height={100}
-        width={100}
+        width={64}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
@@ -82,7 +80,7 @@ const Crear = () => {
         <form onSubmit={generateQRCode}>
           <div>
           <label htmlFor="inputData">
-            Introduce texto ó URL del QR: 
+           * Introduce texto ó URL del QR: 
           </label>
           <div>
           <input
@@ -91,6 +89,7 @@ const Crear = () => {
             placeholder="Introduce texto, URL, etc."
             value={inputData}
             onChange={handleInputChange}
+            required
           />
           </div>
           </div>

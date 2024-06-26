@@ -45,39 +45,155 @@ const IndexPage = () => (
         alt="Patrimonio Nacional"
         className={styles.logo}
       />
+      <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+       
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
       
       <ButonNosotros></ButonNosotros>
+      <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+       
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
     
-      <h1 className={styles.title}>GENERADOR DE QRS</h1>
-      
+      <h1>GENERADOR DE QRS</h1>
+      {/* <h1 className={styles.title}>GENERADOR DE QRS</h1> */}
+      <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+        
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
       <ButonNoticias></ButonNoticias>
+      <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+      
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
+      <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+       
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
       <Link to="/login" className={styles.loginLink}>LOGIN</Link>
+     
+    
      
     </div>
     
 
-
+    
     <div className={styles.links}>
     <ButonVisita></ButonVisita>
+    <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+       
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
+      <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+        
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
       {samplePageLinks.map((link, i) => (
         <React.Fragment key={link.url}>
           <a href={link.url} className={styles.sampleLink}>{link.text}</a>
           {i !== samplePageLinks.length - 1 && <> · </>}
         </React.Fragment>
       ))}
+      
       <ButonContacto></ButonContacto>
+      <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+      
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
+       
     </div>
 
    
-
+        
     <CollapseInformacion />
 
     <div className={styles.imageGallery}>
       <StaticImage
         src="../images/Captura de pantalla 2024-05-21 113808.png"
         loading="eager"
-        height={70}
-        width={70}
+        height={90}
+        width={95}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt="Captura"
@@ -98,7 +214,7 @@ const IndexPage = () => (
         src="../images/tandem.png"
         loading="eager"
         height={70}
-        width={100}
+        width={95}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt="Tandem"
@@ -108,7 +224,7 @@ const IndexPage = () => (
         src="../images/thumbnail_CABECERA TANDEM.png"
         loading="eager"
         height={70}
-        width={800}
+        width={780}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt="Cabecera Tandem"
@@ -129,6 +245,84 @@ const IndexPage = () => (
         </React.Fragment>
       ))}
     </div>
+    <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
+      <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
+      <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
+      <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
+        <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
+        <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
     
  
    
