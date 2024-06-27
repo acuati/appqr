@@ -47,6 +47,16 @@ const Crear = () => {
     return (
       <Layout>
         <Seo title="Patrimonio Nacional" />
+        <StaticImage
+        src="../images/flecha.png"
+        loading="eager"
+        width={30}
+        height={30}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt="Patrimonio Nacional"
+        className={styles.logo}
+      />
         <CollapseRedes></CollapseRedes>
         <StaticImage
         src="../images/Qr-ejemplo.png"
@@ -125,6 +135,17 @@ const Crear = () => {
   
           <button type="submit">Crear & Previsualizar QR</button>
         </form>
+
+        <StaticImage
+        src="../images/flecha.png"
+        loading="eager"
+        width={30}
+        height={30}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt="Patrimonio Nacional"
+        className={styles.logo}
+      />
   
         {showQRCode && (
           <div id="qrCodeContainer">
@@ -137,6 +158,16 @@ const Crear = () => {
               bgColor="transparent" // Transparent background for better visibility
               fgColor={qrCodeColor} // Use state variable for dynamic color
             />
+             <StaticImage
+        src="../images/flecha.png"
+        loading="eager"
+        width={30}
+        height={30}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt="Patrimonio Nacional"
+        className={styles.logo}
+      />
           </div>
         )}
 

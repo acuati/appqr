@@ -73,6 +73,16 @@ const Qr2 = () => (
   
   <Link to="/listado">Volver a atrás</Link>
   <StaticImage
+        src="../images/flecha.png"
+        loading="eager"
+        width={30}
+        height={30}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt="Patrimonio Nacional"
+        className={styles.logo}
+      />
+  <StaticImage
         src="../images/qr-color-jardin-del-principe.png"
         loading="eager"
         height={400}

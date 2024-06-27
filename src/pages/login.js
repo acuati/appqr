@@ -33,12 +33,13 @@ const Login = () => {
 
   return (
     <Layout>
+      
        <CollapseRedes></CollapseRedes>
        <StaticImage
-        src="../images/Qr-ejemplo.png"
+        src="../images/flecha.png"
         loading="eager"
-        width={64}
-        quality={95}
+        width={30}
+        quality={30}
         formats={["auto", "webp", "avif"]}
         alt=""
         style={{ 
@@ -47,8 +48,23 @@ const Login = () => {
           // marginRight: '20rem' 
         }}
       />
+      
       <CollapseAdvertencias></CollapseAdvertencias>
+      
       <form onSubmit={handleLogin}>
+      <StaticImage
+        src="../images/flecha.png"
+        loading="eager"
+        width={30}
+        quality={30}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
         <label>
           * Nombre de usuario
           <div></div>
@@ -60,6 +76,19 @@ const Login = () => {
           />
         </label>
         <div>
+        <StaticImage
+        src="../images/flecha.png"
+        loading="eager"
+        width={30}
+        quality={30}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
           <label>
             * Credenciales de acceso
             <div></div>

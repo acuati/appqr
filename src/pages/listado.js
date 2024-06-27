@@ -11,6 +11,26 @@ import TableListado from '../components/tablelistado';
 // import { StaticImage } from "gatsby-plugin-image"
 const Listado = () => (
   <Layout>
+     <StaticImage
+        src="../images/flecha.png"
+        loading="eager"
+        width={30}
+        height={30}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt="Patrimonio Nacional"
+        className={styles.logo}
+      />
+       <StaticImage
+        src="../images/flecha2.png"
+        loading="eager"
+        width={30}
+        height={30}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt="Patrimonio Nacional"
+        className={styles.logo}
+      />
     <CollapseRedes></CollapseRedes>
     <StaticImage
         src="../images/Qr-ejemplo.png"
@@ -40,6 +60,7 @@ const Listado = () => (
         }}
       />
     <Link to="/">Salir</Link>
+    
     <TableListado></TableListado>
 
 
@@ -47,8 +68,28 @@ const Listado = () => (
       
   
         
-  
-  <Link to="/acceso">Volver a atrás</Link>
+    <StaticImage
+        src="../images/flecha.png"
+        loading="eager"
+        width={30}
+        height={30}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt="Patrimonio Nacional"
+        className={styles.logo}
+      />
+
+  <Link to="/acceso"> Volver a atrás </Link>
+  <StaticImage
+        src="../images/flecha2.png"
+        loading="eager"
+        width={30}
+        height={30}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt="Patrimonio Nacional"
+        className={styles.logo}
+      />
   
  
 

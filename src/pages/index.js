@@ -67,7 +67,7 @@ const IndexPage = () => (
      {/* GENERADOR DE QRS  */}
     
       <h1>GENERADOR
-      <button>
+     
       <StaticImage
         src="../images/flecha.png"
         loading="eager"
@@ -79,7 +79,7 @@ const IndexPage = () => (
         className={styles.logo}
       />
 
-      </button>
+      
 
       </h1>
       {/* <h1 className={styles.title}>GENERADOR DE QRS</h1> */}
@@ -141,6 +141,16 @@ const IndexPage = () => (
           // marginRight: '20rem' 
         }}
       />
+      <StaticImage
+        src="../images/flecha.png"
+        loading="eager"
+        width={30}
+        height={30}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt="Patrimonio Nacional"
+        className={styles.logo}
+      />
       <ButonNoticias></ButonNoticias>
       
       <StaticImage
@@ -191,7 +201,16 @@ const IndexPage = () => (
       ))}
       
      
-     
+      <StaticImage
+        src="../images/flecha.png"
+        loading="eager"
+        width={30}
+        height={30}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt="Patrimonio Nacional"
+        className={styles.logo}
+      />
       
       
        
@@ -240,6 +259,16 @@ const IndexPage = () => (
       
     
       </p>
+      <StaticImage
+        src="../images/flecha.png"
+        loading="eager"
+        width={30}
+        height={30}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt="Patrimonio Nacional"
+        className={styles.logo}
+      />
       
      
       <StaticImage

@@ -60,10 +60,10 @@ const Registro = () => {
     <Layout>
       <CollapseRedes></CollapseRedes>
       <StaticImage
-        src="../images/Qr-ejemplo.png"
+        src="../images/flecha.png"
         loading="eager"
-        width={64}
-        quality={95}
+        width={30}
+        quality={30}
         formats={["auto", "webp", "avif"]}
         alt=""
         style={{ 
@@ -114,6 +114,19 @@ const Registro = () => {
             required 
           />
         </div>
+        <StaticImage
+        src="../images/flecha.png"
+        loading="eager"
+        width={30}
+        quality={30}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
         <div>
           <label htmlFor="confirmEmail">* Confirmar email:</label>
         </div>

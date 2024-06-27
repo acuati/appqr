@@ -429,7 +429,9 @@ function TableListado(args) {
     <Table>
       <thead>
         <tr>
-          <th>Todos mis QRS</th>
+          <th>Todos mis QRS 
+            
+          </th>
           <th>
             <input 
               placeholder='Búsqueda' 

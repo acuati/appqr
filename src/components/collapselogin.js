@@ -19,6 +19,19 @@ function CollapseLogin(args) {
             <Collapse isOpen={isOpen} {...args}>
             <Card>
                 <CardBody>
+                <StaticImage
+        src="../images/flecha.png"
+        loading="eager"
+        width={30}
+        quality={30}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
                    <p>Su login ha resultado exitoso</p>  
                    <a>Por favor: </a>
                 <Link to="/acceso">
