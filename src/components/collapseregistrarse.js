@@ -12,7 +12,7 @@ function CollapseRegistrarse(args) {
       <Button color="primary" onClick={toggle} style={{ marginBottom: '1rem' }}>
       <strong>REGISTRAR</strong>
       </Button>
-      <StaticImage
+      {/* <StaticImage
         src="../images/flecha.png"
         loading="eager"
         width={30}
@@ -24,7 +24,7 @@ function CollapseRegistrarse(args) {
           // marginLeft: `20rem`,
           // marginRight: '20rem' 
         }}
-      />
+      /> */}
       <Collapse isOpen={isOpen} {...args}>
         <Card>
           <CardBody>

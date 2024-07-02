@@ -13,35 +13,8 @@ import TableListado from '../components/tablelistado';
 
 const Qr1 = () => (
   <Layout>
-    <CollapseRedes></CollapseRedes>
-    <StaticImage
-        src="../images/Qr-ejemplo.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      />
-    <CollapseAdvertencias></CollapseAdvertencias>
-    <StaticImage
-        src="../images/Qr-ejemplo.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      />
-    <Link to="/">Salir</Link>
+    
+    <Link to="/login">Salir</Link>
     <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
@@ -69,16 +42,7 @@ const Qr1 = () => (
         
   
   <Link to="/listado">Volver a atrás</Link>
-  <StaticImage
-        src="../images/flecha.png"
-        loading="eager"
-        width={30}
-        height={30}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt="Patrimonio Nacional"
-        className={styles.logo}
-      />
+  
   <StaticImage
         src="../images/qr-color-palaciodearanjuez.png"
         loading="eager"

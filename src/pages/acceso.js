@@ -29,7 +29,7 @@ const Acceso = () => (
           // marginRight: '20rem' 
         }}
       />
-    <CollapseRedes></CollapseRedes>
+    
     <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
@@ -43,20 +43,8 @@ const Acceso = () => (
           // marginRight: '20rem' 
         }}
       />
-    <CollapseAdvertencias></CollapseAdvertencias>
-    <StaticImage
-        src="../images/Qr-ejemplo.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      />
+   
+   
 
       
   
@@ -77,7 +65,7 @@ const Acceso = () => (
   
   
   
-        <Link to="/">Salir</Link>
+        <Link to="/login">Salir</Link>
  
 
   </Layout>

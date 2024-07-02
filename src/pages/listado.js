@@ -11,7 +11,7 @@ import TableListado from '../components/tablelistado';
 // import { StaticImage } from "gatsby-plugin-image"
 const Listado = () => (
   <Layout>
-     <StaticImage
+     {/* <StaticImage
         src="../images/flecha.png"
         loading="eager"
         width={30}
@@ -30,36 +30,10 @@ const Listado = () => (
         formats={["auto", "webp", "avif"]}
         alt="Patrimonio Nacional"
         className={styles.logo}
-      />
-    <CollapseRedes></CollapseRedes>
-    <StaticImage
-        src="../images/Qr-ejemplo.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      />
-    <CollapseAdvertencias></CollapseAdvertencias>
-    <StaticImage
-        src="../images/Qr-ejemplo.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      />
-    <Link to="/">Salir</Link>
+      /> */}
+   
+   
+    <Link to="/login">Salir</Link>
     
     <TableListado></TableListado>
 
@@ -68,7 +42,7 @@ const Listado = () => (
       
   
         
-    <StaticImage
+    {/* <StaticImage
         src="../images/flecha.png"
         loading="eager"
         width={30}
@@ -77,10 +51,10 @@ const Listado = () => (
         formats={["auto", "webp", "avif"]}
         alt="Patrimonio Nacional"
         className={styles.logo}
-      />
+      /> */}
 
   <Link to="/acceso"> Volver a atrás </Link>
-  <StaticImage
+  {/* <StaticImage
         src="../images/flecha2.png"
         loading="eager"
         width={30}
@@ -89,7 +63,7 @@ const Listado = () => (
         formats={["auto", "webp", "avif"]}
         alt="Patrimonio Nacional"
         className={styles.logo}
-      />
+      /> */}
   
  
 

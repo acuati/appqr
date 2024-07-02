@@ -19,7 +19,7 @@ function CollapseLogin(args) {
             <Collapse isOpen={isOpen} {...args}>
             <Card>
                 <CardBody>
-                <StaticImage
+                {/* <StaticImage
         src="../images/flecha.png"
         loading="eager"
         width={30}
@@ -31,7 +31,7 @@ function CollapseLogin(args) {
           // marginLeft: `20rem`,
           // marginRight: '20rem' 
         }}
-      />
+      /> */}
                    <p>Su login ha resultado exitoso</p>  
                    <a>Por favor: </a>
                 <Link to="/acceso">

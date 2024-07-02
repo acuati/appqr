@@ -12,38 +12,9 @@ import TableListado from '../components/tablelistado';
 
 const Qr2 = () => (
   <Layout>
-    <CollapseRedes></CollapseRedes>
-    <StaticImage
-        src="../images/Qr-ejemplo.png"
-        loading="eager"
-        
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      />
-    <CollapseAdvertencias></CollapseAdvertencias>
-    <StaticImage
-        src="../images/Qr-ejemplo.png"
-        loading="eager"
-        
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      />
+    
 
-<Link to="/">Salir</Link>
+<Link to="/login">Salir</Link>
     <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
@@ -72,16 +43,7 @@ const Qr2 = () => (
         
   
   <Link to="/listado">Volver a atrás</Link>
-  <StaticImage
-        src="../images/flecha.png"
-        loading="eager"
-        width={30}
-        height={30}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt="Patrimonio Nacional"
-        className={styles.logo}
-      />
+  
   <StaticImage
         src="../images/qr-color-jardin-del-principe.png"
         loading="eager"

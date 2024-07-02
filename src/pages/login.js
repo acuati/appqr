@@ -34,37 +34,13 @@ const Login = () => {
   return (
     <Layout>
       
-       <CollapseRedes></CollapseRedes>
-       <StaticImage
-        src="../images/flecha.png"
-        loading="eager"
-        width={30}
-        quality={30}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      />
+       
+     
       
-      <CollapseAdvertencias></CollapseAdvertencias>
+
       
       <form onSubmit={handleLogin}>
-      <StaticImage
-        src="../images/flecha.png"
-        loading="eager"
-        width={30}
-        quality={30}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      />
+      
         <label>
           * Nombre de usuario
           <div></div>
@@ -76,19 +52,7 @@ const Login = () => {
           />
         </label>
         <div>
-        <StaticImage
-        src="../images/flecha.png"
-        loading="eager"
-        width={30}
-        quality={30}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      />
+        
           <label>
             * Credenciales de acceso
             <div></div>
@@ -99,10 +63,12 @@ const Login = () => {
               required 
             />
           </label>
+          
         </div>
+       
         {error && <p style={{ color: 'red' }}>{error}</p>}
         
-        <StaticImage
+        {/* <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
         width={64}
@@ -114,10 +80,25 @@ const Login = () => {
           // marginLeft: `20rem`,
           // marginRight: '20rem' 
         }}
-      />
+      /> */}
+
+
+
+{/* <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      /> */}
 
 <Link to="/registro">Registrarse</Link>
-
 <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
@@ -131,8 +112,22 @@ const Login = () => {
           // marginRight: '20rem' 
         }}
       />
-
+      <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      />
           <CollapseLogin></CollapseLogin>
+
+          
 
 
         
@@ -141,7 +136,7 @@ const Login = () => {
      
         
    
-        <Link to="/">Volver al inicio</Link>
+        
        
       
     </Layout>

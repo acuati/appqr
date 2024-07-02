@@ -7,7 +7,11 @@
 
 import * as React from "react"
 
+import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+
+
 
 import Header from "./header"
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -35,16 +39,25 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
+        
+     
         <footer
           style={{
             marginTop: `var(--space-2)`,
             fontSize: `var(--font-sm)`,
           }}
         >
+
+          
+       
+
           © Patrimonio Nacional | {new Date().getFullYear()} &middot;
           {` `}
+
+         
           
         </footer>
+      
       </div>
     </>
   )

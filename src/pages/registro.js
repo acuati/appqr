@@ -58,21 +58,8 @@ const Registro = () => {
 
   return (
     <Layout>
-      <CollapseRedes></CollapseRedes>
-      <StaticImage
-        src="../images/flecha.png"
-        loading="eager"
-        width={30}
-        quality={30}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      />
-      <CollapseAdvertencias></CollapseAdvertencias>
+      
+    
       <h2>Registro de usuarios</h2>
       <form onSubmit={handleRegister}>
         <div>
@@ -114,7 +101,7 @@ const Registro = () => {
             required 
           />
         </div>
-        <StaticImage
+        {/* <StaticImage
         src="../images/flecha.png"
         loading="eager"
         width={30}
@@ -126,7 +113,7 @@ const Registro = () => {
           // marginLeft: `20rem`,
           // marginRight: '20rem' 
         }}
-      />
+      /> */}
         <div>
           <label htmlFor="confirmEmail">* Confirmar email:</label>
         </div>
