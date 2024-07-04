@@ -7,139 +7,188 @@ import CollapseLogin from '../components/collapselogin';
 import CollapseRedes from '../components/collapseredes';
 import CollapseAdvertencias from '../components/collapseadvertencias';
 const Login = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
 
-  const handleLogin = async (event) => {
-    event.preventDefault();
+  const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [message, setMessage] = useState('');
+    const handleLogin = async () => {
+        try {
+            const peticion = await fetch('http://localhost/api-qr-tandem/v1/login-user.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password })
+            });
+            const respuesta = await peticion.json();
+            console.log(respuesta)
+            if (respuesta.message === 'Login exitoso') {
+                // Aquí podrías guardar el usuario en el estado global o en localStorage
+                setMessage('Login exitoso para el usuario con id:'+ respuesta.user.id);
+                localStorage.setItem('tndm_id', respuesta.user.id)
+                localStorage.setItem('tndm_email', respuesta.user.email)
+                // localStorage.setItem('tndm_img_user', respuesta.user.image_url)
+                localStorage.setItem('tndm_role', respuesta.user.role)
+                window.location.href='/acceso'
+            } else {
+                setMessage('Credenciales incorrectas');
+            }
+        } catch (error) {
+            console.error('Error en el login', error);
+            setMessage('Error en el login');
+        }
+  // const [username, setUsername] = useState('');
+  // const [password, setPassword] = useState('');
+  // const [error, setError] = useState('');
 
-    const response = await fetch('/api/login.php', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ username, password }),
-    });
+  // const handleLogin = async (event) => {
+  //   event.preventDefault();
 
-    const data = await response.json();
+  //   const response = await fetch('/api/login.php', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify({ username, password }),
+  //   });
 
-    if (data.success) {
-      navigate('/acceso');
-    } else {
-      setError(data.message);
-    }
+  //   const data = await response.json();
+
+  //   if (data.success) {
+  //     navigate('/acceso');
+  //   } else {
+  //     setError(data.message);
+  //   }
   };
 
   return (
-    <Layout>
+//     <Layout>
       
        
      
       
 
       
-      <form onSubmit={handleLogin}>
+//       <form onSubmit={handleLogin}>
       
-        <label>
-          * Nombre de usuario
-          <div></div>
-          <input 
-            type='text' 
-            value={username} 
-            onChange={(e) => setUsername(e.target.value)}
-            required 
-          />
-        </label>
-        <div>
+//         <label>
+//           * Nombre de usuario
+//           <div></div>
+//           <input 
+//             type='text' 
+//             value={username} 
+//             onChange={(e) => setUsername(e.target.value)}
+//             required 
+//           />
+//         </label>
+//         <div>
         
-          <label>
-            * Credenciales de acceso
-            <div></div>
-            <input 
-              type='password' 
-              value={password} 
-              onChange={(e) => setPassword(e.target.value)}
-              required 
-            />
-          </label>
+//           <label>
+//             * Credenciales de acceso
+//             <div></div>
+//             <input 
+//               type='password' 
+//               value={password} 
+//               onChange={(e) => setPassword(e.target.value)}
+//               required 
+//             />
+//           </label>
           
-        </div>
+//         </div>
        
-        {error && <p style={{ color: 'red' }}>{error}</p>}
+//         {error && <p style={{ color: 'red' }}>{error}</p>}
         
-        {/* <StaticImage
-        src="../images/Qr-ejemplo.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      /> */}
+//         {/* <StaticImage
+//         src="../images/Qr-ejemplo.png"
+//         loading="eager"
+//         width={64}
+//         quality={95}
+//         formats={["auto", "webp", "avif"]}
+//         alt=""
+//         style={{ 
+//           // marginBottom: `var(--space-3)`,
+//           // marginLeft: `20rem`,
+//           // marginRight: '20rem' 
+//         }}
+//       /> */}
 
 
 
-{/* <StaticImage
-        src="../images/Qr-ejemplo.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      /> */}
+// {/* <StaticImage
+//         src="../images/Qr-ejemplo.png"
+//         loading="eager"
+//         width={64}
+//         quality={95}
+//         formats={["auto", "webp", "avif"]}
+//         alt=""
+//         style={{ 
+//           // marginBottom: `var(--space-3)`,
+//           // marginLeft: `20rem`,
+//           // marginRight: '20rem' 
+//         }}
+//       /> */}
 
-<Link to="/registro">Registrarse</Link>
-<StaticImage
-        src="../images/Qr-ejemplo.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      />
-      <StaticImage
-        src="../images/Qr-ejemplo.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      />
-          <CollapseLogin></CollapseLogin>
+// <Link to="/registro">Registrarse</Link>
+// {/* <StaticImage
+//         src="../images/Qr-ejemplo.png"
+//         loading="eager"
+//         width={64}
+//         quality={95}
+//         formats={["auto", "webp", "avif"]}
+//         alt=""
+//         style={{ 
+//           // marginBottom: `var(--space-3)`,
+//           // marginLeft: `20rem`,
+//           // marginRight: '20rem' 
+//         }}
+//       />
+//       <StaticImage
+//         src="../images/Qr-ejemplo.png"
+//         loading="eager"
+//         width={64}
+//         quality={95}
+//         formats={["auto", "webp", "avif"]}
+//         alt=""
+//         style={{ 
+//           // marginBottom: `var(--space-3)`,
+//           // marginLeft: `20rem`,
+//           // marginRight: '20rem' 
+//         }}
+//       />
+//           <CollapseLogin></CollapseLogin> */}
 
           
 
 
         
         
-      </form>
+//       </form>
      
         
    
         
        
       
-    </Layout>
+//     </Layout>
+<Layout>
+<div>
+<input
+    type="email"
+    placeholder="Email de usuario"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+/>
+<input
+    type="password"
+    placeholder="Credenciales de acceso"
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+/>
+<button onClick={handleLogin}>ACCEDER</button>
+
+</div>
+
+</Layout>
   );
 };
 

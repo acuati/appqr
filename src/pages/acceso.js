@@ -15,8 +15,13 @@ import ButonAviso from '../components/butonaviso';
 import ButonPolitica from '../components/butonpolitica';
 const Acceso = () => (
   <Layout>
+   <Link to="/login">Salir</Link>
+   <br>
+
+   </br>
+   <br></br>
     <CollapseAccesos></CollapseAccesos>
-    <StaticImage
+    {/* <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
         width={64}
@@ -42,7 +47,7 @@ const Acceso = () => (
           // marginLeft: `20rem`,
           // marginRight: '20rem' 
         }}
-      />
+      /> */}
    
    
 
@@ -65,7 +70,7 @@ const Acceso = () => (
   
   
   
-        <Link to="/login">Salir</Link>
+        
  
 
   </Layout>
