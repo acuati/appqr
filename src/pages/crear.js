@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CerrarSesion from '../components/cerrarsesion';
 import QRCode from 'qrcode.react';
 
 import {QRCodeSVG} from 'qrcode.react';
@@ -50,7 +51,7 @@ const Crear = () => {
         
     
         
-        <Link to="/login">Salir</Link>
+        <CerrarSesion></CerrarSesion>
         <form onSubmit={generateQRCode}>
           <div>
           <label htmlFor="inputData">

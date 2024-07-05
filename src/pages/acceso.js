@@ -1,5 +1,7 @@
 import React from 'react';
 
+import CerrarSesion from '../components/cerrarsesion';
+
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
@@ -13,29 +15,21 @@ import ButtonSegacess from '../components/buttonsegacess';
 import ButonAccesibilidad from '../components/butonaccesibilidad';
 import ButonAviso from '../components/butonaviso';
 import ButonPolitica from '../components/butonpolitica';
+import Perfil from '../components/perfil';
+import UploadUserImage from '../components/uploaduserimage';
+
 const Acceso = () => (
   <Layout>
-   <Link to="/login">Salir</Link>
-   <br>
+    <Perfil
+          email={ localStorage.getItem('tndm_email')}
+          id={localStorage.getItem('tndm_id')}
+          role ={localStorage.getItem('tndm_role')}
+    />
+    <UploadUserImage idUser={localStorage.getItem('tndm_id')}></UploadUserImage>
 
-   </br>
-   <br></br>
+   
     <CollapseAccesos></CollapseAccesos>
-    {/* <StaticImage
-        src="../images/Qr-ejemplo.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      />
-    
-    <StaticImage
+    {/* {/* <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
         width={64}
@@ -48,6 +42,24 @@ const Acceso = () => (
           // marginRight: '20rem' 
         }}
       /> */}
+
+{/* <StaticImage
+        src="../images/Qr-ejemplo.png"
+        loading="eager"
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ 
+          // marginBottom: `var(--space-3)`,
+          // marginLeft: `20rem`,
+          // marginRight: '20rem' 
+        }}
+      /> 
+    <CerrarSesion></CerrarSesion> */}
+    
+    
+   
    
    
 

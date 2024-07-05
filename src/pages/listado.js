@@ -1,5 +1,5 @@
 import React from 'react';
-
+import CerrarSesion from '../components/cerrarsesion';
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
@@ -33,7 +33,7 @@ const Listado = () => (
       /> */}
    
    
-    <Link to="/login">Salir</Link>
+   <CerrarSesion></CerrarSesion>
     
     <TableListado></TableListado>
 

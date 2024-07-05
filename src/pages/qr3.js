@@ -1,5 +1,5 @@
 import React from 'react';
-
+import CerrarSesion from '../components/cerrarsesion';
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
@@ -14,11 +14,10 @@ const Qr3 = () => (
   <Layout>
     
     
-    <Link to="/login">Salir</Link>
-    <StaticImage
+    <CerrarSesion></CerrarSesion>
+    {/* <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"
-        
         width={64}
         quality={95}
         formats={["auto", "webp", "avif"]}
@@ -28,7 +27,7 @@ const Qr3 = () => (
           // marginLeft: `20rem`,
           // marginRight: '20rem' 
         }}
-      />
+      /> */}
    
 
 

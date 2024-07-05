@@ -26,7 +26,7 @@ const Header = ({ siteTitle }) => (
     <nav>
       
       
-        <a href="/"><FaHome />Inicio </a>
+       
        
        <a href="https://www.patrimonionacional.es/sobre-patrimonio/conoce-nuestra-historia"><FaInfoCircle />NOSOTROS </a>
         <a href="https://www.patrimonionacional.es/contacto"><MdContactless />CONTACTO </a>

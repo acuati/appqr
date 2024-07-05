@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaHome, FaInfoCircle} from "react-icons/fa";
 import { Link, navigate } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout";
@@ -171,6 +172,7 @@ const Login = () => {
       
 //     </Layout>
 <Layout>
+<a href="/"><FaHome />Inicio </a>
 <div>
 <input
     type="email"
