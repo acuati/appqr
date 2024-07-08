@@ -15,199 +15,146 @@ const Registro = () => {
   const [confirmEmail, setConfirmEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  // const [message, setMessage] = useState('');
   const [error, setError] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
 
   const handleRegister = async (event) => {
-    event.preventDefault();
+    event.preventDefault(); // Previene la recarga de la página
+    setError('');
+    setSuccessMessage('');
 
     if (email !== confirmEmail) {
-      setError('Emails do not match');
-      setSuccessMessage('');
+      setError('Los correos electrónicos no coinciden.');
       return;
     }
 
     if (password !== confirmPassword) {
-      setError('Passwords do not match');
-      setSuccessMessage('');
+      setError('Las contraseñas no coinciden.');
       return;
     }
 
-    const response = await fetch('/api/register.php', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ username, delegation, email, password }),
-    });
+    try {
+      const peticion = await fetch('http://localhost/api-qr-tandem/v1/register-user.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, delegation, email, password })
+      });
 
-    const data = await response.json();
+      const respuesta = await peticion.json();
+      console.log(respuesta);
 
-    if (data.success) {
-      setSuccessMessage('Su registro se ha realizado correctamente. Por favor vuelva a la página de login.');
-      setError('');
-      // Si deseas redirigir al usuario automáticamente después de unos segundos
-      setTimeout(() => navigate('/login'), 5000);
-    } else {
-      setError(data.message);
-      setSuccessMessage('');
+      if (respuesta.message === 'Registro exitoso') {
+        setSuccessMessage('Registro exitoso para el usuario con id:' + respuesta.user.id);
+        localStorage.setItem('tndm_id', respuesta.user.id);
+        localStorage.setItem('tndm_email', respuesta.user.email);
+        localStorage.setItem('tndm_role', respuesta.user.role);
+        window.location.href='/registro'
+        
+        // Redirigir o mostrar mensaje de éxito
+      } else {
+        setError('Complete todos los campos requeridos');
+      }
+    } catch (error) {
+      console.error('Error en el registro', error);
+      setError('Error en el registro');
     }
   };
 
-
-
   return (
     <Layout>
-      
-    
       <h2>Registro de usuarios</h2>
       <form onSubmit={handleRegister}>
         <div>
-          <label htmlFor="username">* Nombre de usuario:</label>
+          <label htmlFor="username">Nombre de usuario:</label>
         </div>
         <div>
-          <input 
-            type="text" 
-            id="username" 
-            name="username" 
+          <input
+            type="text"
+            id="username"
+            name="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            required 
+            
           />
         </div>
         <div>
-          <label htmlFor="delegation">* Delegación:</label>
+          <label htmlFor="delegation">Delegación:</label>
         </div>
         <div>
-          <input 
-            type="text" 
-            id="delegation" 
+          <input
+            type="text"
+            id="delegation"
             name="delegation"
             value={delegation}
-            onChange={(e) => setDelegation(e.target.value)} 
-            required 
+            onChange={(e) => setDelegation(e.target.value)}
+            
           />
         </div>
         <div>
-          <label htmlFor="email">* Email:</label>
+          <label htmlFor="email">Email:</label>
         </div>
         <div>
-          <input 
-            type="email" 
-            id="email" 
-            name="email" 
+          <input
+            type="email"
+            id="email"
+            name="email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)} 
-            required 
+            onChange={(e) => setEmail(e.target.value)}
+            
           />
         </div>
-        {/* <StaticImage
-        src="../images/flecha.png"
-        loading="eager"
-        width={30}
-        quality={30}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      /> */}
         <div>
-          <label htmlFor="confirmEmail">* Confirmar email:</label>
+          <label htmlFor="confirmEmail">Confirmar email:</label>
         </div>
         <div>
-          <input 
-            type="email" 
-            id="confirmEmail" 
+          <input
+            type="email"
+            id="confirmEmail"
             name="confirmEmail"
             value={confirmEmail}
-            onChange={(e) => setConfirmEmail(e.target.value)} 
-            required 
+            onChange={(e) => setConfirmEmail(e.target.value)}
+           
           />
         </div>
         <div>
-          <label htmlFor="password">* Contraseña:</label>
+          <label htmlFor="password">Contraseña:</label>
         </div>
         <div>
-          <input 
-            type="password" 
-            id="password" 
+          <input
+            type="password"
+            id="password"
             name="password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)} 
-            required 
+            onChange={(e) => setPassword(e.target.value)}
+            
           />
         </div>
         <div>
-          <label htmlFor="confirmPassword">* Confirmar contraseña:</label>
+          <label htmlFor="confirmPassword">Confirmar contraseña:</label>
         </div>
         <div>
-          <input 
-            type="password" 
-            id="confirmPassword" 
+          <input
+            type="password"
+            id="confirmPassword"
             name="confirmPassword"
             value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)} 
-            required 
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            
           />
         </div>
+
         {error && <p style={{ color: 'red' }}>{error}</p>}
         {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
-       
+
+        <div>
+          <button type="submit">REGISTRAR</button>
+        </div>
+
         <Link to="/login">Volver al login</Link>
-        
-        <StaticImage
-        src="../images/Qr-ejemplo.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      />
-       <StaticImage
-        src="../images/Qr-ejemplo.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ 
-          // marginBottom: `var(--space-3)`,
-          // marginLeft: `20rem`,
-          // marginRight: '20rem' 
-        }}
-      />
-       <CollapseRegistrarse></CollapseRegistrarse>
-         
-
-       
-
-        
-          
-          
-          
-
-
-       
-        
       </form>
-     
-
-      
-     
-    
-     
-     
-     
-      
-      
     </Layout>
   );
 };
