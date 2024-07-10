@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 import { Link, navigate } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import * as styles from "../components/index.module.css"
-import CollapseRegistrarse from '../components/collapseregistrarse';
-import CollapseRedes from '../components/collapseredes';
-import CollapseAdvertencias from '../components/collapseadvertencias';
 
 const Registro = () => {
   const [username, setUsername] = useState('');
@@ -15,22 +10,16 @@ const Registro = () => {
   const [confirmEmail, setConfirmEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  // const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
-  const [successMessage, setSuccessMessage] = useState('');
+  const [message, setMessage] = useState('');
 
-  const handleRegister = async (event) => {
-    event.preventDefault(); // Previene la recarga de la página
-    setError('');
-    setSuccessMessage('');
-
+  const handleRegister = async () => {
     if (email !== confirmEmail) {
-      setError('Los correos electrónicos no coinciden.');
+      setMessage('Los correos electrónicos no coinciden');
       return;
     }
 
     if (password !== confirmPassword) {
-      setError('Las contraseñas no coinciden.');
+      setMessage('Las contraseñas no coinciden');
       return;
     }
 
@@ -42,119 +31,80 @@ const Registro = () => {
         },
         body: JSON.stringify({ username, delegation, email, password })
       });
-
       const respuesta = await peticion.json();
       console.log(respuesta);
-
       if (respuesta.message === 'Registro exitoso') {
-        setSuccessMessage('Registro exitoso para el usuario con id:' + respuesta.user.id);
+        setMessage('Registro exitoso para el usuario con id:' + respuesta.user.id);
         localStorage.setItem('tndm_id', respuesta.user.id);
         localStorage.setItem('tndm_email', respuesta.user.email);
         localStorage.setItem('tndm_role', respuesta.user.role);
-        window.location.href='/registro'
-        
-        // Redirigir o mostrar mensaje de éxito
+        window.location.href = '/registro';
       } else {
-        setError('Complete todos los campos requeridos');
+        setMessage('Credenciales incorrectas');
       }
     } catch (error) {
       console.error('Error en el registro', error);
-      setError('Error en el registro');
+      setMessage('Error en el registro');
     }
   };
 
   return (
     <Layout>
       <h2>Registro de usuarios</h2>
-      <form onSubmit={handleRegister}>
+      <div>
         <div>
-          <label htmlFor="username">Nombre de usuario:</label>
+      Nombre de usuario
         </div>
+        <input
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
         <div>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            
-          />
+      Nombre de la delegación
         </div>
+        <input
+          type="text"
+          value={delegation}
+          onChange={(e) => setDelegation(e.target.value)}
+        />
         <div>
-          <label htmlFor="delegation">Delegación:</label>
+        Email de usuario
         </div>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
         <div>
-          <input
-            type="text"
-            id="delegation"
-            name="delegation"
-            value={delegation}
-            onChange={(e) => setDelegation(e.target.value)}
-            
-          />
+        Confirmar </div> <div> email de usuario
         </div>
+        <input
+          type="email"
+          value={confirmEmail}
+          onChange={(e) => setConfirmEmail(e.target.value)}
+        />
         <div>
-          <label htmlFor="email">Email:</label>
+        Credenciales de acceso
         </div>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <div>Confirmar </div> <div>credenciales de acceso</div>
+        <input
+          type="password"
+          value={confirmPassword}
+          onChange={(e) => setConfirmPassword(e.target.value)}
+        />
         <div>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            
-          />
+        <button onClick={handleRegister}>REGISTRAR</button>
         </div>
-        <div>
-          <label htmlFor="confirmEmail">Confirmar email:</label>
-        </div>
-        <div>
-          <input
-            type="email"
-            id="confirmEmail"
-            name="confirmEmail"
-            value={confirmEmail}
-            onChange={(e) => setConfirmEmail(e.target.value)}
-           
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Contraseña:</label>
-        </div>
-        <div>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            
-          />
-        </div>
-        <div>
-          <label htmlFor="confirmPassword">Confirmar contraseña:</label>
-        </div>
-        <div>
-          <input
-            type="password"
-            id="confirmPassword"
-            name="confirmPassword"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            
-          />
-        </div>
-
-        {error && <p style={{ color: 'red' }}>{error}</p>}
-        {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
-
-        <div>
-          <button type="submit">REGISTRAR</button>
-        </div>
-
-        <Link to="/login">Volver al login</Link>
-      </form>
+        
+      </div>
+      {message && <p>{message}</p>}
+      <Link to="/login">Volver al login</Link>
     </Layout>
   );
 };
@@ -162,6 +112,7 @@ const Registro = () => {
 export const Head = () => <Seo title="Patrimonio Nacional" />
 
 export default Registro;
+
 
 
 // import React, { useState } from 'react';
