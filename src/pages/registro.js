@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, navigate } from "gatsby";
+import { Link } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
@@ -13,23 +13,13 @@ const Registro = () => {
   const [message, setMessage] = useState('');
 
   const handleRegister = async () => {
-    if (email !== confirmEmail) {
-      setMessage('Los correos electrónicos no coinciden');
-      return;
-    }
-
-    if (password !== confirmPassword) {
-      setMessage('Las contraseñas no coinciden');
-      return;
-    }
-
     try {
       const peticion = await fetch('http://localhost/api-qr-tandem/v1/register-user.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ username, delegation, email, password })
+        body: JSON.stringify({ username, delegation, email, confirmEmail, password, confirmPassword })
       });
       const respuesta = await peticion.json();
       console.log(respuesta);
@@ -38,7 +28,7 @@ const Registro = () => {
         localStorage.setItem('tndm_id', respuesta.user.id);
         localStorage.setItem('tndm_email', respuesta.user.email);
         localStorage.setItem('tndm_role', respuesta.user.role);
-        window.location.href = '/registro';
+        window.location.href='/registro';
       } else {
         setMessage('Credenciales incorrectas');
       }
@@ -52,56 +42,45 @@ const Registro = () => {
     <Layout>
       <h2>Registro de usuarios</h2>
       <div>
-        <div>
-      Nombre de usuario
-        </div>
+        <div>Nombre de usuario</div>
         <input
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-        <div>
-      Nombre de la delegación
-        </div>
+        <div>Nombre de la delegación</div>
         <input
           type="text"
           value={delegation}
           onChange={(e) => setDelegation(e.target.value)}
         />
-        <div>
-        Email de usuario
-        </div>
+        <div>Email de usuario</div>
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <div>
-        Confirmar </div> <div> email de usuario
-        </div>
+        <div>Confirmar email de usuario</div>
         <input
           type="email"
           value={confirmEmail}
           onChange={(e) => setConfirmEmail(e.target.value)}
         />
-        <div>
-        Credenciales de acceso
-        </div>
+        <div>Credenciales de acceso</div>
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <div>Confirmar </div> <div>credenciales de acceso</div>
+        <div>Confirmar credenciales de acceso</div>
         <input
           type="password"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
         />
         <div>
-        <button onClick={handleRegister}>REGISTRAR</button>
+          <button onClick={handleRegister}>REGISTRAR</button>
         </div>
-        
       </div>
       {message && <p>{message}</p>}
       <Link to="/login">Volver al login</Link>
@@ -112,6 +91,7 @@ const Registro = () => {
 export const Head = () => <Seo title="Patrimonio Nacional" />
 
 export default Registro;
+
 
 
 
