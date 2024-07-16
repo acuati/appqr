@@ -28,7 +28,7 @@ const Registro = () => {
         localStorage.setItem('tndm_id', respuesta.user.id);
         localStorage.setItem('tndm_email', respuesta.user.email);
         localStorage.setItem('tndm_role', respuesta.user.role);
-        window.location.href='/registro';
+        window.location.href = '/registro';
       } else {
         setMessage('Credenciales incorrectas');
       }
@@ -37,6 +37,10 @@ const Registro = () => {
       setMessage('Error en el registro');
     }
   };
+
+ 
+  
+
 
   return (
     <Layout>
@@ -60,7 +64,8 @@ const Registro = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <div>Confirmar email de usuario</div>
+        <div>Confirmar</div>
+        <div>email de usuario</div>
         <input
           type="email"
           value={confirmEmail}
@@ -72,7 +77,8 @@ const Registro = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <div>Confirmar credenciales de acceso</div>
+        <div>Confirmar</div>
+        <div>credenciales de acceso</div>
         <input
           type="password"
           value={confirmPassword}
@@ -91,6 +97,7 @@ const Registro = () => {
 export const Head = () => <Seo title="Patrimonio Nacional" />
 
 export default Registro;
+
 
 
 
