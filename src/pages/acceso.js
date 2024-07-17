@@ -17,9 +17,28 @@ import ButonAviso from '../components/butonaviso';
 import ButonPolitica from '../components/butonpolitica';
 import Perfil from '../components/perfil';
 import UploadUserImage from '../components/uploaduserimage';
-
+import CardStylo from '../components/Card-Stylo';
 const Acceso = () => (
   <Layout>
+    <CardStylo
+     titulo="Bienvenid@"
+    //  descripcion="Esto es el contenido del la card"
+     url="https://upload.wikimedia.org/wikipedia/commons/4/49/Palacio_Real_de_Aranjuez_%285%29.jpg"
+     destacado= 'destacado'
+  
+     >
+    </CardStylo>
+    
+     <CardStylo
+     titulo="Esta es tu página de perfil como usuario de esta app"
+    //  descripcion="Esto es el contenido del la card"
+     url="https://upload.wikimedia.org/wikipedia/commons/4/49/Palacio_Real_de_Aranjuez_%285%29.jpg"
+     >
+     </CardStylo>
+     
+
+
+
     <Perfil
           email={ localStorage.getItem('tndm_email')}
           id={localStorage.getItem('tndm_id')}
