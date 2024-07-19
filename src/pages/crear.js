@@ -105,7 +105,7 @@ const Crear = () => {
   
         {showQRCode && (
           <div id="qrCodeContainer">
-            <p>* Las creaciones en esta app se guardan automáticamente con un logo de patrimonio nacional en su interior y conservando sus datos seleccionados en la página de listado. </p>
+            {/* <p>* Las creaciones en esta app se guardan automáticamente con un logo de patrimonio nacional en su interior y conservando sus datos seleccionados en la página de listado. </p> */}
             <p>Aquí tiene la previsualización de su QR, que se ha creado correctamente para:</p>
             <h1>{inputData}</h1>
             <QRCode

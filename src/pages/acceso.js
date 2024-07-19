@@ -30,7 +30,8 @@ const Acceso = () => (
     </CardStylo>
     
      <CardStylo
-     titulo="Esta es tu página de perfil como usuario de esta app"
+    //  titulo="Esta es tu página de perfil como usuario de esta app"
+     titulo="Usuari@"
     //  descripcion="Esto es el contenido del la card"
      url="https://upload.wikimedia.org/wikipedia/commons/4/49/Palacio_Real_de_Aranjuez_%285%29.jpg"
      >

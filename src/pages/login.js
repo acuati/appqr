@@ -61,7 +61,7 @@ const Login = () => {
 />
 <button onClick={handleLogin}>ACCEDER</button>
 <div>
-<Link to='/registro'>Registrarse</Link>
+{/* <Link to='/registro'>Registrarse</Link> */}
 </div>
 
 </div>
@@ -100,7 +100,7 @@ const Login = () => {
 </div>
         </div>
         <div>
-        <Link to='/registro'>Registrarse</Link>
+        {/* <Link to='/registro'>Registrarse</Link> */}
 </div>
         <div className="card">
           <StaticImage
@@ -132,7 +132,7 @@ const Login = () => {
 
 </div>
 <div>
-<Link to='/registro'>Registrarse</Link>
+{/* <Link to='/registro'>Registrarse</Link> */}
 </div>
         </div>
         <div className="card">
@@ -165,9 +165,9 @@ const Login = () => {
 
 <button onClick={handleLogin}>ACCEDER</button>
 <div>
-<Link to='/registro'>Registrarse</Link>
+{/* <Link to='/registro'>Registrarse</Link> */}
 </div>
-<p>* Si se acaba de registrar en nuestra aplicación, por defecto se le ha asignado este ROL de GUEST </p>
+{/* <p>* Si se acaba de registrar en nuestra aplicación, por defecto se le ha asignado este ROL de GUEST </p> */}
 
 </div>
 

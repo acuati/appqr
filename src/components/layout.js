@@ -5,8 +5,8 @@
  * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
  */
 
-import * as React from "react"
-
+// import * as React from "react"
+import React, { useState } from 'react';
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
@@ -16,6 +16,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Header from "./header"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./layout.css"
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,8 +29,10 @@ const Layout = ({ children }) => {
     }
   `)
 
+ 
   return (
     <>
+      
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
@@ -59,6 +62,7 @@ const Layout = ({ children }) => {
         </footer>
       
       </div>
+      
     </>
   )
 }

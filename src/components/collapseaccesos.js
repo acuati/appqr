@@ -10,7 +10,8 @@ function CollapseAccesos(args) {
   return (
     <React.StrictMode>
       <Button color="primary" onClick={toggle} style={{ marginBottom: '1rem' }}>
-      <strong>Creación & Listado de tus QRS</strong>
+      <strong>Creación de tus QRS</strong>
+      {/* <strong>Creación & Listado de tus QRS</strong> */}
       </Button>
       <Collapse isOpen={isOpen} {...args}>
         <Card>
@@ -36,7 +37,7 @@ function CollapseAccesos(args) {
             </Collapse>
 
             
-            <Collapse isOpen={isOpen} {...args}>
+            {/* <Collapse isOpen={isOpen} {...args}>
             <Card>
                 <CardBody>
                 <Button
@@ -47,7 +48,7 @@ function CollapseAccesos(args) {
                
                 </CardBody>
             </Card>
-            </Collapse>
+            </Collapse> */}
             
           
           </CardBody>

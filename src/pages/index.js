@@ -1,4 +1,5 @@
-import * as React from "react"
+import React , {useState} from "react"
+// import * as React from "react"
 import { BiLogoYoutube } from "react-icons/bi";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -11,6 +12,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
+
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import CollapseInformacion from "../components/collapseinformacion"
@@ -19,7 +21,7 @@ import ButonContacto from "../components/butoncontacto"
 import ButonNosotros from "../components/butonnosotros"
 import ButonNoticias from "../components/butonnoticias"
 import ButonVisita from "../components/butonvisita"
-
+import MiMapa from "../components/mimapa";
 
 
 
@@ -45,9 +47,11 @@ const moreLinks = [
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
-const IndexPage = () => (
-  
-  <Layout>
+const IndexPage = () => {
+  // const [latLng, setLatLng] = useState(null);
+  return (
+    <Layout>
+    
     
 
     <div className={styles.header}>
@@ -91,6 +95,21 @@ const IndexPage = () => (
       
 
       </h1>
+      {/* <h1>LOCALIZADOR</h1> */}
+      {/* <div>
+
+<MiMapa setLatLng={setLatLng} />
+<div className="coordinates">
+  {latLng ? (
+    <p>
+      Latitud: {latLng.lat}, Longitud: {latLng.lng}
+    </p>
+  ) : (
+    <p>Haz clic en el mapa para obtener las coordenadas</p>
+  )}
+</div>
+</div> */}
+      
       {/* <h1 className={styles.title}>GENERADOR DE QRS</h1> */}
       {/* <ButonNosotros></ButonNosotros>
       <StaticImage
@@ -310,9 +329,15 @@ const IndexPage = () => (
       ))}
     </div>
 
+
+
+
    
   </Layout>
-)
+
+  )
+  
+}
 
 export const Head = () => <Seo title="Patrimonio Nacional" />
 
