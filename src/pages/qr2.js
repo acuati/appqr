@@ -46,8 +46,8 @@ const Qr2 = () => (
   <StaticImage
         src="../images/qr-color-jardin-del-principe.png"
         loading="eager"
-        height={400}
-        width={400}
+        height={100}
+        width={100}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""

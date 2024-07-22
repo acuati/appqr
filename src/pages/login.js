@@ -75,8 +75,8 @@ const Login = () => {
             alt="Imagen 1"
             placeholder="blurred"
             layout="fixed"
-            width={100}
-            height={100}
+            width={150}
+            height={150}
           />
           <div className="card-body">
             <h5 className="card-title">Gerentes</h5>
@@ -108,8 +108,8 @@ const Login = () => {
             alt="Imagen 2"
             placeholder="blurred"
             layout="fixed"
-            width={100}
-            height={100}
+            width={150}
+            height={150}
           />
           <div className="card-body">
             <h5 className="card-title">Emplead@s</h5>
@@ -141,8 +141,8 @@ const Login = () => {
             alt="Imagen 3"
             placeholder="blurred"
             layout="fixed"
-            width={100}
-            height={100}
+            width={150}
+            height={150}
             
           />
           <div className="card-body">

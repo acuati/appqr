@@ -66,8 +66,8 @@ const Header = ({ siteTitle }) => (
 <StaticImage
   src="../images/Captura de pantalla 2024-05-21 113808.png"
   loading="eager"
-  height={50}
-  width={50}
+  height={55}
+  width={60}
   quality={95}
   formats={["auto", "webp", "avif"]}
   alt="Captura"
@@ -77,8 +77,8 @@ const Header = ({ siteTitle }) => (
 <StaticImage
   src="../images/tandem.png"
   loading="eager"
-  height={50}
-  width={67}
+  height={55}
+  width={75}
   quality={95}
   formats={["auto", "webp", "avif"]}
   alt="Tandem"
@@ -121,8 +121,8 @@ const Header = ({ siteTitle }) => (
         <StaticImage
         src="../images/thumbnail_CABECERA TANDEM.png"
         loading="eager"
-        height={70}
-        width={780}
+        height={75}
+        width={880}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt="Cabecera Tandem"

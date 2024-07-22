@@ -16,6 +16,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Header from "./header"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./layout.css"
+import DarkMode from './DarkMode';
 
 
 const Layout = ({ children }) => {
@@ -28,19 +29,46 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
+  const [darkmode, setDarkMode]=useState(false);
+  const handleDarkMode =()=>{
+    setDarkMode(!darkmode)
+  }
  
   return (
     <>
+      <button style={{
+    backgroundColor:'#333',
+    color: 'white',
+    position: 'fixed',
+    right: 0
+  }}
+    onClick={handleDarkMode}>
+      {darkmode?
+      '100'
       
+      
+      
+      
+      :
+      '0%'
+      
+      
+      
+      
+      }
+
+  </button>
+    <DarkMode dark={darkmode}>
+      {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
+      <div className="container">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
+      {/* <div
         style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
+          // margin: `0 auto`,
+          // maxWidth: `var(--size-content)`,
+          // padding: `var(--size-gutter)`,
         }}
-      >
+      > */}
         <main>{children}</main>
         
      
@@ -60,8 +88,10 @@ const Layout = ({ children }) => {
          
           
         </footer>
+        </div>
+        </DarkMode>
       
-      </div>
+      {/* </div> */}
       
     </>
   )
