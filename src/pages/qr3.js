@@ -14,7 +14,7 @@ const Qr3 = () => (
   <Layout>
     
     
-    <CerrarSesion></CerrarSesion>
+    {/* <CerrarSesion></CerrarSesion> */}
     {/* <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"

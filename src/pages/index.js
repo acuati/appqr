@@ -6,9 +6,10 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import MiMapa from "../components/mimapa"
 import Seo from "../components/seo"
+import CollapseAccesos from '../components/collapseaccesos';
 import * as styles from "../components/index.module.css"
 import CollapseInformacion from "../components/collapseinformacion"
-
+import CardColumns from "../components/cardcolumns"
 
 
 
@@ -47,7 +48,8 @@ const IndexPage = () => {
         alt="Patrimonio Nacional"
         className={styles.logo}
       />
-      <Link to="/login" className={styles.loginLink}>LOGIN</Link>
+      {/* <Link to="/login" className={styles.loginLink}>LOGIN</Link> */}
+      <CollapseAccesos></CollapseAccesos>
       <StaticImage
         src="../images/patrimonionacional.png"
         loading="eager"
@@ -102,6 +104,116 @@ const IndexPage = () => {
         </React.Fragment>
       ))}
     </div>
+
+    <div className="card-columns">
+
+    <CardColumns></CardColumns>
+       
+        <div className="card">
+          <StaticImage
+            src="../images/Captura de pantalla 2024-07-05 123618.png"
+            alt="Imagen 1"
+            placeholder="blurred"
+            layout="fixed"
+            width={150}
+            height={150}
+          />
+          <div className="card-body">
+            <h5 className="card-title">Gerentes</h5>
+            <p className="card-text">Con ROL: ADMIN</p>
+          </div>
+          <div>
+{/* <input
+    type="email"
+    placeholder="Email de usuario"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+/>
+<input
+    type="password"
+    placeholder="Credenciales de acceso"
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+/>
+<button onClick={handleLogin}>ACCEDER</button> */}
+
+</div>
+        </div>
+        <div>
+        {/* <Link to='/registro'>Registrarse</Link> */}
+</div>
+        <div className="card">
+          <StaticImage
+            src="../images/Captura de pantalla 2024-07-05 123814.png"
+            alt="Imagen 2"
+            placeholder="blurred"
+            layout="fixed"
+            width={150}
+            height={150}
+          />
+          <div className="card-body">
+            <h5 className="card-title">Emplead@s</h5>
+            <p className="card-text">Con ROL: EMPLOYEE</p>
+          </div>
+          <div>
+{/* <input
+    type="email"
+    placeholder="Email de usuario"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+/>
+<input
+    type="password"
+    placeholder="Credenciales de acceso"
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+/>
+<button onClick={handleLogin}>ACCEDER</button> */}
+
+</div>
+<div>
+{/* <Link to='/registro'>Registrarse</Link> */}
+</div>
+        </div>
+        <div className="card">
+          <StaticImage
+            src="../images/859030.png"
+            alt="Imagen 3"
+            placeholder="blurred"
+            layout="fixed"
+            width={150}
+            height={150}
+            
+          />
+          <div className="card-body">
+            <h5 className="card-title">Invitad@s</h5>
+            <p className="card-text">Con ROL: GUEST</p>
+          </div>
+          <div>
+{/* <input
+    type="email"
+    placeholder="Email de usuario"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+/>
+<input
+    type="password"
+    placeholder="Credenciales de acceso"
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+/>
+
+<button onClick={handleLogin}>ACCEDER</button> */}
+<div>
+{/* <Link to='/registro'>Registrarse</Link> */}
+</div>
+{/* <p>* Si se acaba de registrar en nuestra aplicación, por defecto se le ha asignado este ROL de GUEST </p> */}
+
+</div>
+
+        </div>
+
+</div>
 
 
 

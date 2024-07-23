@@ -14,7 +14,7 @@ import TableListado from '../components/tablelistado';
 const Qr1 = () => (
   <Layout>
     
-    <CerrarSesion></CerrarSesion>
+    {/* <CerrarSesion></CerrarSesion> */}
     {/* <StaticImage
         src="../images/Qr-ejemplo.png"
         loading="eager"

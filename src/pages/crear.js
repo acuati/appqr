@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaHome, FaInfoCircle} from "react-icons/fa";
 import CerrarSesion from '../components/cerrarsesion';
 import QRCode from 'qrcode.react';
 
@@ -10,7 +11,9 @@ import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import CollapseRedes from '../components/collapseredes';
 import CollapseAdvertencias from '../components/collapseadvertencias';
-
+import Perfil from '../components/perfil';
+import UploadUserImage from '../components/uploaduserimage';
+import CardStylo from '../components/Card-Stylo';
 const Crear = () => {
     const [inputData, setInputData] = useState('');
     const [qrCodeSize, setQRCodeSize] = useState(256); // Default QR code size
@@ -48,10 +51,35 @@ const Crear = () => {
     return (
       <Layout>
         <Seo title="Patrimonio Nacional" />
-        
+        <a href="/"><FaHome />Inicio </a>
     
         
-        <CerrarSesion></CerrarSesion>
+        {/* <CerrarSesion></CerrarSesion> */}
+
+        <CardStylo
+     titulo="Bienvenid@"
+    //  descripcion="Esto es el contenido del la card"
+     url="https://upload.wikimedia.org/wikipedia/commons/4/49/Palacio_Real_de_Aranjuez_%285%29.jpg"
+     destacado= 'destacado'
+
+     
+  
+     >
+    </CardStylo>
+    
+     <CardStylo
+    //  titulo="Esta es tu página de perfil como usuario de esta app"
+     titulo="Usuari@"
+    //  descripcion="Esto es el contenido del la card"
+     url="https://upload.wikimedia.org/wikipedia/commons/4/49/Palacio_Real_de_Aranjuez_%285%29.jpg"
+     >
+     </CardStylo>
+     <Perfil
+          email={ localStorage.getItem('tndm_email')}
+          id={localStorage.getItem('tndm_id')}
+          role ={localStorage.getItem('tndm_role')}
+    />
+    <UploadUserImage idUser={localStorage.getItem('tndm_id')}></UploadUserImage>
         <form onSubmit={generateQRCode}>
           <div>
           <label htmlFor="inputData">
@@ -114,11 +142,13 @@ const Crear = () => {
               bgColor="transparent" // Transparent background for better visibility
               fgColor={qrCodeColor} // Use state variable for dynamic color
             />
-             
+            <h2><strong>RECORDATORIO</strong></h2>
+            <h2>Almacenamiento lleno de QRS </h2>
+            
           </div>
         )}
 
-<Link to="/acceso">Volver a atrás</Link>
+{/* <Link to="/acceso">Volver a atrás</Link> */}
       </Layout>
     );
   };

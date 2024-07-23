@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaHome, FaInfoCircle} from "react-icons/fa";
 import CerrarSesion from '../components/cerrarsesion';
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
@@ -33,9 +34,12 @@ const Listado = () => (
       /> */}
    
    
-   <CerrarSesion></CerrarSesion>
-    
+   {/* <CerrarSesion></CerrarSesion> */}
+
+   
+   <a href="/"><FaHome />Inicio </a>
     <TableListado></TableListado>
+
 
 
     
@@ -53,7 +57,9 @@ const Listado = () => (
         className={styles.logo}
       /> */}
 
-  <Link to="/acceso"> Volver a atrás </Link>
+  {/* <Link to="/acceso"> Volver a atrás </Link> */}
+  
+  
   {/* <StaticImage
         src="../images/flecha2.png"
         loading="eager"

@@ -443,6 +443,7 @@ function TableListado(args) {
             <button onClick={handleSearch}>BUSCAR</button>
           </th>
         </tr>
+        <p>Almacenamiento lleno de QRS </p>
       </thead>
       <tbody>
         {displayQrs.map((qr) => (
