@@ -34,10 +34,10 @@ const Listado = () => (
       /> */}
    
    
-   {/* <CerrarSesion></CerrarSesion> */}
+   <CerrarSesion></CerrarSesion>
 
    
-   <a href="/"><FaHome />Inicio </a>
+   {/* <a href="/"><FaHome />Inicio </a> */}
     <TableListado></TableListado>
 
 

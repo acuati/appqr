@@ -51,10 +51,10 @@ const Crear = () => {
     return (
       <Layout>
         <Seo title="Patrimonio Nacional" />
-        <a href="/"><FaHome />Inicio </a>
+        {/* <a href="/"><FaHome />Inicio </a> */}
     
         
-        {/* <CerrarSesion></CerrarSesion> */}
+        <CerrarSesion></CerrarSesion>
 
         <CardStylo
      titulo="Bienvenid@"
@@ -74,12 +74,12 @@ const Crear = () => {
      url="https://upload.wikimedia.org/wikipedia/commons/4/49/Palacio_Real_de_Aranjuez_%285%29.jpg"
      >
      </CardStylo>
-     <Perfil
+     {/* <Perfil
           email={ localStorage.getItem('tndm_email')}
           id={localStorage.getItem('tndm_id')}
           role ={localStorage.getItem('tndm_role')}
     />
-    <UploadUserImage idUser={localStorage.getItem('tndm_id')}></UploadUserImage>
+    <UploadUserImage idUser={localStorage.getItem('tndm_id')}></UploadUserImage> */}
         <form onSubmit={generateQRCode}>
           <div>
           <label htmlFor="inputData">

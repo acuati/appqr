@@ -48,8 +48,8 @@ const IndexPage = () => {
         alt="Patrimonio Nacional"
         className={styles.logo}
       />
-      {/* <Link to="/login" className={styles.loginLink}>LOGIN</Link> */}
-      <CollapseAccesos></CollapseAccesos>
+      <Link to="/login" className={styles.loginLink}>LOGIN</Link>
+      {/* <CollapseAccesos></CollapseAccesos> */}
       <StaticImage
         src="../images/patrimonionacional.png"
         loading="eager"
