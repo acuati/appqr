@@ -1,7 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Perfil from '../components/perfil';
-import UploadUserImage from '../components/uploaduserimage';
 const CardContainer= styled.div`
  border: 1px solid #ccc;
   border-radius: 12px;
