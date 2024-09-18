@@ -11,12 +11,22 @@ import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
 
 // delete L.Icon.Default.prototype._getIconUrl;
 
-L.Icon.Default.mergeOptions({
-    iconUrl,
-    iconRetinaUrl,
-    shadowUrl,
-});
+// L.Icon.Default.mergeOptions({
+//     iconUrl,
+//     iconRetinaUrl,
+//     shadowUrl,
+// });
 
+if (L && L.Icon && L.Icon.Default) {
+    delete L.Icon.Default.prototype._getIconUrl;
+    L.Icon.Default.mergeOptions({
+        iconUrl,
+        iconRetinaUrl,
+        shadowUrl,
+    });
+} else {
+    console.error("L o L.Icon.Default no está definido.");
+}
 const LocationMarker = ({ setLatLng }) => {
     useMapEvents({
         click(e) {
