@@ -1,25 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
 
-// Importar las URLs de los iconos
-import iconUrl from 'leaflet/dist/images/marker-icon.png';
-import iconRetinaUrl from 'leaflet/dist/images/marker-icon-2x.png';
-import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
+let L;  // Declarar `L` fuera para manejar la importación condicional
 
-// Configurar los iconos de Leaflet de forma segura
-const DefaultIcon = L.icon({
-    iconUrl: iconUrl,
-    iconRetinaUrl: iconRetinaUrl,
-    shadowUrl: shadowUrl,
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41]
-});
+if (typeof window !== 'undefined') {
+    // Importar leaflet solo en el lado del cliente
+    L = require('leaflet');
 
-L.Marker.prototype.options.icon = DefaultIcon;
+    // Importar las URLs de los iconos
+    const iconUrl = require('leaflet/dist/images/marker-icon.png');
+    const iconRetinaUrl = require('leaflet/dist/images/marker-icon-2x.png');
+    const shadowUrl = require('leaflet/dist/images/marker-shadow.png');
+
+    // Configurar los iconos de Leaflet de forma segura
+    const DefaultIcon = L.icon({
+        iconUrl: iconUrl,
+        iconRetinaUrl: iconRetinaUrl,
+        shadowUrl: shadowUrl,
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
+
+    L.Marker.prototype.options.icon = DefaultIcon;
+}
 
 const LocationMarker = ({ setLatLng }) => {
     useMapEvents({
@@ -44,3 +50,4 @@ const MiMapa = ({ setLatLng }) => {
 };
 
 export default MiMapa;
+
