@@ -47,7 +47,7 @@ const IndexPage = () => {
         className={styles.logo}
       />
       <Link to="/crear" className={styles.loginLink}>GENERAR</Link>
-      {/* <CollapseAccesos></CollapseAccesos> */}
+      
       <StaticImage
         src="../images/patrimonionacional.png"
         loading="eager"
