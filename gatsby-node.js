@@ -7,6 +7,14 @@
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
  */
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      devtool: "source-map",
+    });
+  }
+};
+
 exports.createPages = async ({ actions }) => {
   const { createPage } = actions
   createPage({
