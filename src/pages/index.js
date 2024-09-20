@@ -1,5 +1,4 @@
-import React from "react"
-import { useState } from "react"
+import React, { useState, useEffect } from "react";  // Aquí se añade useEffect
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
@@ -17,72 +16,56 @@ const moreLinks = [
   // { text: "VISITA", url: "https://tickets.patrimonionacional.es/es" },
 ]
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
-
-
 const IndexPage = () => {
   const [latLng, setLatLng] = useState(null);
-  const [isClient, setIsClient] = useState(false);
-
-  // Verifica si estás en el lado del cliente
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
   return (
     <Layout>
-      <div className={styles.header}>
-        <StaticImage
-          src="../images/patrimonionacional.png"
-          loading="eager"
-          width={64}
-          quality={95}
-          formats={["auto", "webp", "avif"]}
-          alt="Patrimonio Nacional"
-          className={styles.logo}
-        />
-        <Link to="/crear" className={styles.loginLink}>GENERAR</Link>
-        <StaticImage
-          src="../images/patrimonionacional.png"
-          loading="eager"
-          width={64}
-          quality={95}
-          formats={["auto", "webp", "avif"]}
-          alt="Patrimonio Nacional"
-          className={styles.logo}
-        />
-        <h1>GENERADOR</h1>
-        <CollapseInformacion />
-      </div>
-
-      <h2>LOCALIZADOR</h2>
-
-      <div>
-        {/* Solo renderiza el mapa si estamos en el cliente */}
-        {isClient && <MiMapa setLatLng={setLatLng} />}
-        <div className="coordinates">
-          {latLng ? (
-            <p>
-              Latitud: {latLng.lat}, Longitud: {latLng.lng}
-            </p>
-          ) : (
-            <p>Haz clic en el mapa para obtener las coordenadas</p>
-          )}
-        </div>
-      </div>
-
-      <div className={styles.moreLinks}>
-        {moreLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <a href={`${link.url}${utmParameters}`} className={styles.moreLink}>
-              {link.text}
-            </a>
-            {i !== moreLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-      </div>
-    </Layout>
-  );
-};
-
-export const Head = () => <Seo title="Patrimonio Nacional" />;
-export default IndexPage;
+    <div className={styles.header}>
+      <StaticImage
+        src="../images/patrimonionacional.png"
+        loading="eager"
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt="Patrimonio Nacional"
+        className={styles.logo}
+      />
+      <Link to="/crear" className={styles.loginLink}>GENERAR</Link>
+      <StaticImage
+        src="../images/patrimonionacional.png"
+        loading="eager"
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt="Patrimonio Nacional"
+        className={styles.logo}
+      />
+       <h1>GENERADOR</h1>
+      <CollapseInformacion />
+    </div>
+    <h2>LOCALIZADOR</h2>
+    <div>
+    <MiMapa setLatLng={setLatLng} />
+    <div className="coordinates">
+    {latLng ? (
+    <p>
+      Latitud: {latLng.lat}, Longitud: {latLng.lng}
+    </p>
+    ) : (
+    <p>Haz clic en el mapa para obtener las coordenadas</p>
+    )}
+    </div>
+    </div>
+    <div className={styles.moreLinks}>
+      {moreLinks.map((link, i) => (
+        <React.Fragment key={link.url}>
+          <a href={`${link.url}${utmParameters}`} className={styles.moreLink}>{link.text}</a>
+          {i !== moreLinks.length - 1 && <> · </>}
+        </React.Fragment>
+      ))}
+    </div>
+  </Layout>
+  )
+}
+export const Head = () => <Seo title="Patrimonio Nacional" />
+export default IndexPage
