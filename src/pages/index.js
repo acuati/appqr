@@ -43,7 +43,7 @@ const IndexPage = () => {
        <h1>GENERADOR</h1>
       <CollapseInformacion />
     </div>
-    <h2>LOCALIZADOR</h2>
+    {/* <h2>LOCALIZADOR</h2>
     <div>
     <MiMapa setLatLng={setLatLng} />
     <div className="coordinates">
@@ -63,7 +63,7 @@ const IndexPage = () => {
           {i !== moreLinks.length - 1 && <> · </>}
         </React.Fragment>
       ))}
-    </div>
+    </div> */}
   </Layout>
   )
 }
